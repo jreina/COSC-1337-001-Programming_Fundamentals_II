@@ -1,0 +1,535 @@
+Script started on Tue 14 Jun 2016 12:00:59 PM CDT
+==============================================================================
+ The temperature in Amarillo is  75
+==============================================================================
+[usnick@cs ~]$ nums
+2. [usnick@cs ~]$ 
+2. [usnick@cs ~]$ 
+2. [usnick@cs ~]$ endscript > /usr/tmp/PF1/PF1.jun14
+2. [usnick@cs ~]$ 
+2. [usnick@cs ~]$ vi Jun14.java
+
+        <snip!>  (text deleted from output)
+
+3. [usnick@cs ~]$ cat Jun14.java
+public class Jun14
+{
+    public static void main(String args[])
+    {
+        String str = "hello world";
+
+        System.out.println(str.substring(0, 6));
+    }
+}
+4. [usnick@cs ~]$ javac Jun14.java
+5. [usnick@cs ~]$ 
+5. [usnick@cs ~]$ java Jun14
+hello 
+6. [usnivi
+
+        <snip!>  (text deleted from output)
+
+7. [usnick@cs ~]$ 
+7. [usnick@cs ~]$ 
+7. [usnick@cs ~]$ echo *
+adm bin etc JavaGames Jun14.class Jun14.java misc mobile PF1 PF2 PF3 PTK public_html tmp tools typescript unix unix2 unix3
+8. [usnick@cs ~]$ echo \
+*
+9. [usnick@cs ~]$ 
+9. [usnick@cs ~]$ echo \\
+\
+10. [usnick@cs ~]$ 
+10. [usnick@cs ~]$ vi Jun14.java
+
+        <snip!>  (text deleted from output)
+
+11. [usnick@cs ~]$ 
+11. [usnick@cs ~]$ 
+11. [usnick@cs ~]$ PPcat
+public class Jun14
+{
+    public static void main(String args[])
+    {
+        String str = "hello world";
+
+
+        System.out.println("this is the quote mark: \" ");
+
+        System.out.println(str.substring(0, 6));
+    }
+}
+12. [usnPjavac Jun14.javPjava Jun14
+this is the quote mark: " 
+hello 
+14. [usnivi
+
+        <snip!>  (text deleted from output)
+
+15. [usnick@cs ~]$ Pcat
+public class Jun14
+{
+    public static void main(String args[])
+    {
+        String str = "hello world";
+
+
+        System.out.println("this is the quote mark: \" ");
+
+        System.out.println("[" + str.substring(0, 6) + "]");
+    }
+}
+16. [usnjavac Jun14.javjava Jun14
+this is the quote mark: " 
+[hello ]
+18. [usnick@cs ~]$ vi Jun14.java
+
+        <snip!>  (text deleted from output)
+
+19. [usnick@cs ~]$ cat /usr/tmp/PF2/jun13.txt
+
+    public int indexOf(int character)
+    public int indexOf(int character, int startIndex)
+    public int indexOf(String s)
+    public int indexOf(String s, int startIndex)
+
+    public char charAt(int index)
+    public String substring(int startIndex)
+    public String substring(int startIndex, int endIndex)
+
+20. [usnick@cs ~]$ cat /usr/tmp/PF2/jun13.txtvi Jun14.java
+
+        <snip!>  (text deleted from output)
+
+21. [usnick@cs ~]$ cat /usr/tmp/PF2/jun13.txtcat /usr/tmp/PF2/jun13.txtPcat
+public class Jun14
+{
+    public static void main(String args[])
+    {
+        String str = "hello world";
+                  //  01234567890
+
+        //System.out.println("this is the quote mark: \" ");
+
+        int i;
+
+        i = str.indexOf(' ');
+        System.out.println("i = " + i);
+    }
+}
+22. [usnick@cs ~]$ javac Jun14.java
+23. [usnick@cs ~]$ java Jun14
+i = 5
+24. [usnick@cs ~]$ 
+24. [usnivi
+
+        <snip!>  (text deleted from output)
+
+25. [usnick@cs ~]$ 
+25. [usnick@cs ~]$ 
+25. [usnick@cs ~]$ Pcat
+public class Jun14
+{
+    public static void main(String args[])
+    {
+        String str = "hello world";
+                  //  01234567890
+
+        //System.out.println("this is the quote mark: \" ");
+
+        int i;
+
+        i = str.indexOf(' ');
+        System.out.println("i = " + i);
+
+        String token1;
+
+        token1 = str.substring(0, i);
+        System.out.println("token1 = [" + token1 + "];
+    }
+}
+26. [usnjavac Jun14.java
+Jun14.java:18: unclosed string literal
+        System.out.println("token1 = [" + token1 + "];
+                                                   ^
+Jun14.java:18: ';' expected
+        System.out.println("token1 = [" + token1 + "];
+                                                      ^
+Jun14.java:20: reached end of file while parsing
+}
+ ^
+3 errors
+27. [usnivi
+
+        <snip!>  (text deleted from output)
+
+28. [usnPcat
+public class Jun14
+{
+    public static void main(String args[])
+    {
+        String str = "hello world";
+                  //  01234567890
+
+        //System.out.println("this is the quote mark: \" ");
+
+        int i;
+
+        i = str.indexOf(' ');
+        System.out.println("i = " + i);
+
+        String token1;
+
+        token1 = str.substring(0, i);
+        System.out.println("token1 = [" + token1 + "]");
+    }
+}
+29. [usnjavac
+30. [usnick@cs ~]$ 
+30. [usnick@cs ~]$ 
+30. [usnick@cs ~]$ java Jun14
+i = 5
+token1 = [hello]
+31. [usnick@cs ~]$ cp Jun14.java /usr/tmp/PF2
+32. [usnick@cs ~]$ 
+32. [usnick@cs ~]$ 
+32. [usnick@cs ~]$ vi Jun14.java
+
+        <snip!>  (text deleted from output)
+
+33. [usnick@cs ~]$ cp Jun14.java /usr/tmp/PF2PPcat
+public class Jun14
+{
+    public static void main(String args[])
+    {
+        String str = "hello world";
+                  //  01234567890
+
+        //System.out.println("this is the quote mark: \" ");
+
+        int i;
+
+        i = str.indexOf(' ');
+        System.out.println("i = " + i);
+
+        String token1;
+
+        token1 = str.substring(0, i);
+        System.out.println("token1 = [" + token1 + "]");
+
+        String token2;
+
+        token2 = str.substring(i+1);
+        System.out.println("token2 = [" + token2 + "]");
+        
+    }
+}
+34. [usncp Jun14.java /usr/tmp/PF2Pjavac Jun14.java
+35. [usnick@cs ~]$ java Jun14
+i = 5
+token1 = [hello]
+token2 = [world]
+36. [usnick@cs ~]$ vi Jun14.java
+
+        <snip!>  (text deleted from output)
+
+37. [usnick@cs ~]$ 
+37. [usnick@cs ~]$ cat Jun14.java
+public class Jun14
+{
+    public static void main(String args[])
+    {
+        String str = "hello";
+                  //  01234567890
+
+        //System.out.println("this is the quote mark: \" ");
+
+        int i;
+
+        i = str.indexOf(' ');
+        System.out.println("i = " + i);
+
+        String token1;
+
+        token1 = str.substring(0, i);
+        System.out.println("token1 = [" + token1 + "]");
+
+        String token2;
+
+        token2 = str.substring(i+1);
+        System.out.println("token2 = [" + token2 + "]");
+        
+    }
+}
+38. [usnick@cs ~]$ javac Jun14.java
+39. [usnick@cs ~]$ java Jun14
+i = -1
+Exception in thread "main" java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(String.java:1949)
+	at Jun14.main(Jun14.java:17)
+40. [usnivi
+
+        <snip!>  (text deleted from output)
+
+41. [usnick@cs ~]$ cp Jun14.java /usr/tmp/PF2
+42. [usnick@cs ~]$ cp Jun14.java /usr/tmp/PF2vi Jun14.java
+
+        <snip!>  (text deleted from output)
+
+43. [usnick@cs ~]$ 
+43. [usnick@cs ~]$ 
+43. [usnick@cs ~]$ cat Jun14.java
+public class Jun14
+{
+    public static void main(String args[])
+    {
+        String str = "hello world goodbye";
+                  //  0123456789012345678
+                  //       i     j
+
+        //System.out.println("this is the quote mark: \" ");
+
+        int i, j;
+
+        i = str.indexOf(' ');
+        System.out.println("i = " + i);
+
+        String token1;
+
+        token1 = str.substring(0, i);
+        System.out.println("token1 = [" + token1 + "]");
+
+        String token2;
+
+        j = str.indexOf(' ', i+1);
+
+        token2 = str.substring(i+1);
+        System.out.println("token2 = [" + token2 + "]");
+        
+    }
+}
+44. [usnick@cs ~]$ javac Jun14.java
+45. [usnick@cs ~]$ java Jun14
+i = 5
+token1 = [hello]
+token2 = [world goodbye]
+46. [usnivi
+
+        <snip!>  (text deleted from output)
+
+47. [usnick@cs ~]$ Pcat
+public class Jun14
+{
+    public static void main(String args[])
+    {
+        String str = "hello world goodbye";
+                  //  0123456789012345678
+                  //       i     j
+
+        //System.out.println("this is the quote mark: \" ");
+
+        int i, j;
+
+        i = str.indexOf(' ');
+        System.out.println("i = " + i);
+
+        String token1;
+
+        token1 = str.substring(0, i);
+        System.out.println("token1 = [" + token1 + "]");
+
+        String token2;
+
+        j = str.indexOf(' ', i+1);
+
+        token2 = str.substring(i+1, j);
+        System.out.println("token2 = [" + token2 + "]");
+        
+    }
+}
+48. [usnjavac Jun14.javjava Jun14
+i = 5
+token1 = [hello]
+token2 = [world]
+50. [usnivi
+
+        <snip!>  (text deleted from output)
+
+51. [usnick@cs ~]$ Pcat
+public class Jun14
+{
+    public static void main(String args[])
+    {
+        String str = "hello world goodbye";
+                  //  0123456789012345678
+                  //       i     j
+
+        //System.out.println("this is the quote mark: \" ");
+
+        int i, j;
+
+        i = str.indexOf(' ');
+        System.out.println("i = " + i);
+
+        String token1;
+
+        token1 = str.substring(0, i);
+        System.out.println("token1 = [" + token1 + "]");
+
+        String token2;
+
+        j = str.indexOf(' ', i+1);
+
+        token2 = str.substring(i+1, j);
+        System.out.println("token2 = [" + token2 + "]");
+
+        String token3;
+
+        j = str.indexOf(' ', i+1);
+
+        token3 = str.substring(j+1);
+        System.out.println("token3 = [" + token3 + "]");
+    }
+}
+52. [usnjavac Jun14.javjava Jun14
+i = 5
+token1 = [hello]
+token2 = [world]
+token3 = [goodbye]
+54. [usnick@cs ~]$ cd
+63. [usnick@cs lab5c-easyParse]$ 63. [usnick@cs lab5c-easyParse]$ 
+63. [usnick@cs lab5c-easyParse]$ 
+63. [usnick@cs lab5c-easyParse]$ java Lab5
+usage:  Lab5 "STRING IN QUOTES"
+64. [usnick@cs lab5c-easyParse]$ 
+64. [usnick@cs lab5c-easyParse]$ java Lab5 hello world
+usage:  Lab5 "STRING IN QUOTES"
+65. [usnick@cs lab5c-easyParse]$ java Lab5""
+[hello]
+[world]
+66. [usnick@cs lab5c-easyParse]$ java Lab5 "hello world goodbye
+[hello]
+[world]
+[goodbye]
+67. [usnick@cs lab5c-easyParse]$ java Lab5 "hello world goodbye 1 2 3
+[hello]
+[world]
+[goodbye]
+[1]
+[2]
+[3]
+68. [usnick@cs lab5c-easyParse]$ java Lab5 "
+69. [usnick@cs lab5c-easyParse]$ cd
+70. [usnick@cs ~]$ 
+70. [usnick@cs ~]$ vi Jun14.java
+
+        <snip!>  (text deleted from output)
+
+7cat
+public class Jun14
+{
+    public static void main(String args[])
+    {
+        String str = "hello world goodbye";
+                  //  0123456789012345678
+                  //       i     j
+
+        int len = "hello".length();
+        System.out.println("len = " + len);
+
+        //System.out.println("this is the quote mark: \" ");
+
+        int i, j;
+
+        i = str.indexOf(' ');
+        System.out.println("i = " + i);
+
+        String token1;
+
+        token1 = str.substring(0, i);
+        System.out.println("token1 = [" + token1 + "]");
+
+        String token2;
+
+        j = str.indexOf(' ', i+1);
+
+        token2 = str.substring(i+1, j);
+        System.out.println("token2 = [" + token2 + "]");
+
+        String token3;
+
+        j = str.indexOf(' ', i+1);
+
+        token3 = str.substring(j+1);
+        System.out.println("token3 = [" + token3 + "]");
+    }
+}
+72. [usnick@cs ~]$ javac Jun14.java
+73. [usnick@cs ~]$ java Jun14
+len = 5
+i = 5
+token1 = [hello]
+token2 = [world]
+token3 = [goodbye]
+74. [usnick@cs ~]$ vi Jun14.java
+
+        <snip!>  (text deleted from output)
+
+75. [usnick@cs ~]$ Pcat
+public class Jun14
+{
+    public static void main(String args[])
+    {
+        String str = "hello world goodbye";
+                  //  0123456789012345678
+                  //       i     j
+
+        int len = "hello".length();
+        System.out.println("len = " + len);
+
+        len = "".length();
+        System.out.println("len = " + len);
+
+        //System.out.println("this is the quote mark: \" ");
+
+        int i, j;
+
+        i = str.indexOf(' ');
+        System.out.println("i = " + i);
+
+        String token1;
+
+        token1 = str.substring(0, i);
+        System.out.println("token1 = [" + token1 + "]");
+
+        String token2;
+
+        j = str.indexOf(' ', i+1);
+
+        token2 = str.substring(i+1, j);
+        System.out.println("token2 = [" + token2 + "]");
+
+        String token3;
+
+        j = str.indexOf(' ', i+1);
+
+        token3 = str.substring(j+1);
+        System.out.println("token3 = [" + token3 + "]");
+    }
+}
+76. [usnjavac Jun14.javjava Jun14
+len = 5
+len = 0
+i = 5
+token1 = [hello]
+token2 = [world]
+token3 = [goodbye]
+78. [usnick@cs ~]$ mail usnick
+Subject: PF2 lab5 due Sat at 7:00am
+.
+EOT
+Null message body; hope that's ok
+79. [usnick@cs ~]$ 
+79. [usnick@cs ~]$ cp Jun14.java /usr/tmp/PF2
+80. [usnick@cs ~]$ exit
+
+Script done on Tue 14 Jun 2016 12:59:18 PM CDT

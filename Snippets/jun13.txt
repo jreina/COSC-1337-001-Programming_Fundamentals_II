@@ -1,0 +1,10 @@
+
+    public int indexOf(int character)
+    public int indexOf(int character, int startIndex)
+    public int indexOf(String s)
+    public int indexOf(String s, int startIndex)
+
+    public char charAt(int index)
+    public String substring(int startIndex)
+    public String substring(int startIndex, int endIndex)
+

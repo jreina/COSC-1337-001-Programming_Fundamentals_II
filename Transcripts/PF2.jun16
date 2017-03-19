@@ -1,0 +1,848 @@
+Script started on Thu 16 Jun 2016 11:36:23 AM CDT
+==============================================================================
+ The temperature in Amarillo is  82
+==============================================================================
+[usnick@cs ~]$ nums
+2. [usnick@cs ~]$ ls
+adm  JavaGames	   Jun16.class	mobile	PF3	     tmp	 unix
+bin  Jun16b.class  Jun16.java	PF1	PTK	     tools	 unix2
+etc  Jun16b.java   misc		PF2	public_html  typescript  unix3
+3. [usnick@cs ~]$ rm Jun*
+4. [usnick@cs ~]$ 
+4. [usnick@cs ~]$ 
+4. [usnick@cs ~]$ cp PF2/
+cp: missing destination file operand after `PF2/'
+Try `cp --help' for more information.
+5. [usnick@cs ~]$ ls
+adm  etc	misc	PF1  PF3  public_html  tools	   unix   unix3
+bin  JavaGames	mobile	PF2  PTK  tmp	       typescript  unix2
+6. [usnick@cs ~]$ cd PF2
+7. [usnick@cs PF2]$ ls
+8. [usnick@cs PF2]$ cd ..
+9. [usnick@cs ~]$ ls PF2/lab5b-ST/
+10. [usnick@cs ~]$ cp PF2/lab6b-ST/Main3.java .
+cp: cannot stat `PF2/lab6b-ST/Main3.java': No such file or directory
+11. [usnick@cs ~]$ cp PF2/la5
+12. [usnick@cs ~]$ vi Main3.java
+
+        <snip!>  (text deleted from output)
+
+
+        <snip!>  (text deleted from output)
+
+18. [usnick@cs lab5b-ST]$ cd ..
+19. [usnick@cs PF2]$ ls
+20. [usnick@cs PF2]$ cd StringTokenizer/
+21. [usnick@cs StringTokenizer]$ ls
+Main.java
+22. [usnick@cs StringTokenizer]$ cp Main.java ~/Jun16.java
+23. [usnick@cs StringTokenizer]$ 
+23. [usnick@cs StringTokenizer]$ cd
+24. [usnick@cs ~]$ vi Jun16.java
+
+        <snip!>  (text deleted from output)
+
+25. [usnick@cs ~]$ cp Jun16.java /usr/tmp/PF2
+26. [usnick@cs ~]$ 
+26. [usnick@cs ~]$ 
+26. [usnick@cs ~]$ 
+26. [usnick@cs ~]$ vi Jun16.java
+
+        <snip!>  (text deleted from output)
+
+27. [usnick@cs ~]$ 
+27. [usnick@cs ~]$ 
+27. [usnick@cs ~]$ cat Jun16.java
+import java.util.*;
+
+public class Jun16
+{
+    public static void main(String argv[])
+    {
+        String str;
+
+    //1)
+        str = "Hello world";
+        StringTokenizer stok= new StringTokenizer(str);
+        
+        System.out.println(str);
+
+        while (stok.hasMoreTokens())
+        {
+            System.out.println("#tokens = " + stok.countTokens());
+            System.out.println("token: " + stok.nextToken());
+        }
+        System.out.println("#tokens = " + stok.countTokens());
+        //System.out.println("token: " + stok.nextToken());
+        System.out.println("\n\n");
+
+/*
+    //2)
+        str = "    Hello    world   ";
+        stok= new StringTokenizer(str);
+        
+        System.out.println(str);
+
+        while (stok.hasMoreTokens())
+        {
+            System.out.println("#tokens = " + stok.countTokens());
+            System.out.println("token: " + stok.nextToken());
+        }
+        System.out.println("#tokens = " + stok.countTokens());
+        System.out.println("\n\n");
+
+    //3)
+        str = "root:x:0:0:root:/root:/bin/bash";
+        stok = new StringTokenizer(str, ":");
+
+        System.out.println(str);
+
+
+        int n = stok.countTokens();
+        System.out.println("#tokens = " + n);
+
+        for (int i=0; i<n; i++)
+        {
+            System.out.println("token " + stok.nextToken());
+        }
+
+        //System.out.println("username = " + stok.nextToken());
+        //System.out.println("password = " + stok.nextToken());
+        //System.out.println("userid   = " + stok.nextToken());
+        //System.out.println("groupid  = " + stok.nextToken());
+        //System.out.println("comment  = " + stok.nextToken());
+        //System.out.println("home dir = " + stok.nextToken());
+        //System.out.println("shell    = " + stok.nextToken());
+        //System.out.println("\n\n");
+
+    //4)
+        str = "Hello-world.It is!a nice day,today";
+        stok= new StringTokenizer(str,"-.!, ");
+        
+        System.out.println(str);
+
+        while (stok.hasMoreTokens())
+        {
+            System.out.println("#tokens = " + stok.countTokens());
+            System.out.println("token: " + stok.nextToken());
+        }
+        System.out.println("#tokens = " + stok.countTokens());
+*/
+    }
+}
+
+28. [usnick@cs ~]$ javac Jun16.java
+29. [usnick@cs ~]$ java Jun16
+Hello world
+#tokens = 2
+token: Hello
+#tokens = 1
+token: world
+#tokens = 0
+
+
+
+30. [usnick@cs ~]$ mail usnick
+Subject: ST lab tokens printed in brackets
+.
+EOT
+Null message body; hope that's ok
+31. [usnick@cs ~]$ 
+31. [usnick@cs ~]$ vi Jun16.java
+
+        <snip!>  (text deleted from output)
+
+32. [usnick@cs ~]$ cd PF2/lab*easy*
+33. [usnick@cs lab4-easySearchReplace]$ cd ..
+34. [usnick@cs PF2]$ ls
+35. [usnick@cs PF2]$ cd lab5c-easyParse/
+36. [usnick@cs lab5c-easyParse]$ 
+36. [usnick@cs lab5c-easyParse]$ ls
+assign	Lab5.class  Lab5.java
+37. [usnick@cs lab5c-easyParse]$ java Lab5 "   hello   world  "
+[]
+[]
+[]
+[hello]
+[]
+[]
+[world]
+[]
+[]
+38. [usnick@cs lab5c-easyParse]$ cd
+39. [usnick@cs ~]$ vi Jun16.java
+
+        <snip!>  (text deleted from output)
+
+40. [usnick@cs ~]$ 
+40. [usnick@cs ~]$ cat Jun16.java
+import java.util.*;
+
+public class Jun16
+{
+    public static void main(String argv[])
+    {
+        String str;
+
+    //1)
+        str = "Hello world";
+        StringTokenizer stok= new StringTokenizer(str);
+        
+        System.out.println(str);
+
+        while (stok.hasMoreTokens())
+        {
+            System.out.println("#tokens = " + stok.countTokens());
+            System.out.println("token: " + stok.nextToken());
+        }
+        System.out.println("#tokens = " + stok.countTokens());
+        //System.out.println("token: " + stok.nextToken());
+        System.out.println("\n\n");
+
+    //2)
+        str = "    Hello    world   ";
+        stok= new StringTokenizer(str);
+        
+        System.out.println(str);
+
+        while (stok.hasMoreTokens())
+        {
+            System.out.println("#tokens = " + stok.countTokens());
+            System.out.println("token: " + stok.nextToken());
+        }
+        System.out.println("#tokens = " + stok.countTokens());
+        System.out.println("\n\n");
+
+/*
+    //3)
+        str = "root:x:0:0:root:/root:/bin/bash";
+        stok = new StringTokenizer(str, ":");
+
+        System.out.println(str);
+
+
+        int n = stok.countTokens();
+        System.out.println("#tokens = " + n);
+
+        for (int i=0; i<n; i++)
+        {
+            System.out.println("token " + stok.nextToken());
+        }
+
+        //System.out.println("username = " + stok.nextToken());
+        //System.out.println("password = " + stok.nextToken());
+        //System.out.println("userid   = " + stok.nextToken());
+        //System.out.println("groupid  = " + stok.nextToken());
+        //System.out.println("comment  = " + stok.nextToken());
+        //System.out.println("home dir = " + stok.nextToken());
+        //System.out.println("shell    = " + stok.nextToken());
+        //System.out.println("\n\n");
+
+    //4)
+        str = "Hello-world.It is!a nice day,today";
+        stok= new StringTokenizer(str,"-.!, ");
+        
+        System.out.println(str);
+
+        while (stok.hasMoreTokens())
+        {
+            System.out.println("#tokens = " + stok.countTokens());
+            System.out.println("token: " + stok.nextToken());
+        }
+        System.out.println("#tokens = " + stok.countTokens());
+*/
+    }
+}
+
+41. [usnick@cs ~]$ javac Jun16.java
+42. [usnick@cs ~]$ java Jun16
+Hello world
+#tokens = 2
+token: Hello
+#tokens = 1
+token: world
+#tokens = 0
+
+
+
+    Hello    world   
+#tokens = 2
+token: Hello
+#tokens = 1
+token: world
+#tokens = 0
+
+
+
+43. [usnick@cs ~]$ vi Jun16.java
+
+        <snip!>  (text deleted from output)
+
+44. [usnick@cs ~]$ tail /etc/passwd
+breithaupt:x:885:885:student:/home/breithaupt:/bin/bash
+eddy:x:886:886:student:/home/eddy:/bin/bash
+harding:x:887:887:student:/home/harding:/bin/bash
+johnson:x:888:888:student:/home/johnson:/bin/bash
+mcdaniel:x:889:889:student:/home/mcdaniel:/bin/bash
+miller:x:890:890:student:/home/miller:/bin/bash
+nelson:x:891:891:student:/home/nelson:/bin/bash
+parra:x:892:892:student:/home/parra:/bin/bash
+payne:x:893:893:student:/home/payne:/bin/bash
+villena:x:894:894:student:/home/villena:/bin/bash
+45. [usnick@cs ~]$ vi Jun16.java
+
+        <snip!>  (text deleted from output)
+
+46. [usnick@cs ~]$ 
+46. [usnick@cs ~]$ 
+46. [usnick@cs ~]$ cat Jun16.java
+import java.util.*;
+
+public class Jun16
+{
+    public static void main(String argv[])
+    {
+        String str;
+
+    //1)
+        str = "Hello world";
+        StringTokenizer stok= new StringTokenizer(str);
+        
+        System.out.println(str);
+
+        while (stok.hasMoreTokens())
+        {
+            System.out.println("#tokens = " + stok.countTokens());
+            System.out.println("token: " + stok.nextToken());
+        }
+        System.out.println("#tokens = " + stok.countTokens());
+        //System.out.println("token: " + stok.nextToken());
+        System.out.println("\n\n");
+
+    //2)
+        str = "    Hello    world   ";
+        stok= new StringTokenizer(str);
+        
+        System.out.println(str);
+
+        while (stok.hasMoreTokens())
+        {
+            System.out.println("#tokens = " + stok.countTokens());
+            System.out.println("token: " + stok.nextToken());
+        }
+        System.out.println("#tokens = " + stok.countTokens());
+        System.out.println("\n\n");
+
+    //3)
+        str = "root:x:0:0:root:/root:/bin/bash";
+        stok = new StringTokenizer(str, ":");
+
+        System.out.println(str);
+
+
+        int n = stok.countTokens();
+        System.out.println("#tokens = " + n);
+
+        for (int i=0; i<n; i++)
+        {
+            System.out.println("token " + stok.nextToken());
+        }
+
+        //System.out.println("username = " + stok.nextToken());
+        //System.out.println("password = " + stok.nextToken());
+        //System.out.println("userid   = " + stok.nextToken());
+        //System.out.println("groupid  = " + stok.nextToken());
+        //System.out.println("comment  = " + stok.nextToken());
+        //System.out.println("home dir = " + stok.nextToken());
+        //System.out.println("shell    = " + stok.nextToken());
+        //System.out.println("\n\n");
+
+/*
+    //4)
+        str = "Hello-world.It is!a nice day,today";
+        stok= new StringTokenizer(str,"-.!, ");
+        
+        System.out.println(str);
+
+        while (stok.hasMoreTokens())
+        {
+            System.out.println("#tokens = " + stok.countTokens());
+            System.out.println("token: " + stok.nextToken());
+        }
+        System.out.println("#tokens = " + stok.countTokens());
+*/
+    }
+}
+
+47. [usnick@cs ~]$ javac Jun16.java
+48. [usnick@cs ~]$ java Jun16
+Hello world
+#tokens = 2
+token: Hello
+#tokens = 1
+token: world
+#tokens = 0
+
+
+
+    Hello    world   
+#tokens = 2
+token: Hello
+#tokens = 1
+token: world
+#tokens = 0
+
+
+
+root:x:0:0:root:/root:/bin/bash
+#tokens = 7
+token root
+token x
+token 0
+token 0
+token root
+token /root
+token /bin/bash
+49. [usnivi
+
+        <snip!>  (text deleted from output)
+
+50. [usnick@cs ~]$ Pcat
+import java.util.*;
+
+public class Jun16
+{
+    public static void main(String argv[])
+    {
+        String str;
+
+    //1)
+        str = "Hello world";
+        StringTokenizer stok= new StringTokenizer(str);
+        
+        System.out.println(str);
+
+        while (stok.hasMoreTokens())
+        {
+            System.out.println("#tokens = " + stok.countTokens());
+            System.out.println("token: " + stok.nextToken());
+        }
+        System.out.println("#tokens = " + stok.countTokens());
+        //System.out.println("token: " + stok.nextToken());
+        System.out.println("\n\n");
+
+    //2)
+        str = "    Hello    world   ";
+        stok= new StringTokenizer(str);
+        
+        System.out.println(str);
+
+        while (stok.hasMoreTokens())
+        {
+            System.out.println("#tokens = " + stok.countTokens());
+            System.out.println("token: " + stok.nextToken());
+        }
+        System.out.println("#tokens = " + stok.countTokens());
+        System.out.println("\n\n");
+
+    //3)
+        str = "root:x:0:0:root:/root:/bin/bash";
+        stok = new StringTokenizer(str, ":");
+
+        System.out.println(str);
+
+
+        int n = stok.countTokens();
+        System.out.println("#tokens = " + n);
+
+        for (int i=0; i<n; i++)
+        {
+            System.out.println("token " + stok.nextToken());
+        }
+
+        //System.out.println("username = " + stok.nextToken());
+        //System.out.println("password = " + stok.nextToken());
+        //System.out.println("userid   = " + stok.nextToken());
+        //System.out.println("groupid  = " + stok.nextToken());
+        //System.out.println("comment  = " + stok.nextToken());
+        //System.out.println("home dir = " + stok.nextToken());
+        //System.out.println("shell    = " + stok.nextToken());
+        //System.out.println("\n\n");
+
+    //4)
+        str = "Hello-world.It is!a nice day,today";
+        stok= new StringTokenizer(str,"-.!, ");
+        
+        System.out.println(str);
+
+        while (stok.hasMoreTokens())
+        {
+            System.out.println("#tokens = " + stok.countTokens());
+            System.out.println("token: " + stok.nextToken());
+        }
+        System.out.println("#tokens = " + stok.countTokens());
+    }
+}
+
+51. [usnjavac Jun16.javjava Jun16
+Hello world
+#tokens = 2
+token: Hello
+#tokens = 1
+token: world
+#tokens = 0
+
+
+
+    Hello    world   
+#tokens = 2
+token: Hello
+#tokens = 1
+token: world
+#tokens = 0
+
+
+
+root:x:0:0:root:/root:/bin/bash
+#tokens = 7
+token root
+token x
+token 0
+token 0
+token root
+token /root
+token /bin/bash
+Hello-world.It is!a nice day,today
+#tokens = 8
+token: Hello
+#tokens = 7
+token: world
+#tokens = 6
+token: It
+#tokens = 5
+token: is
+#tokens = 4
+token: a
+#tokens = 3
+token: nice
+#tokens = 2
+token: day
+#tokens = 1
+token: today
+#tokens = 0
+53. [usnick@cs ~]$ 53. [usnick@cs ~]$ vi Jun16.java
+
+        <snip!>  (text deleted from output)
+
+54. [usnick@cs ~]$ cat Jun16.java
+import java.util.*;
+
+public class Jun16
+{
+    public static void main(String argv[])
+    {
+        String str;
+
+    //1)
+        str = "Hello world";
+        StringTokenizer stok= new StringTokenizer(str);
+        
+        System.out.println(str);
+
+        while (stok.hasMoreTokens())
+        {
+            System.out.println("#tokens = " + stok.countTokens());
+            System.out.println("token: [" + stok.nextToken() + "]");
+        }
+        System.out.println("#tokens = " + stok.countTokens());
+        System.out.println("token: " + stok.nextToken());
+        System.out.println("\n\n");
+
+    //2)
+        str = "    Hello    world   ";
+        stok= new StringTokenizer(str);
+        
+        System.out.println(str);
+
+        while (stok.hasMoreTokens())
+        {
+            System.out.println("#tokens = " + stok.countTokens());
+            System.out.println("token: " + stok.nextToken());
+        }
+        System.out.println("#tokens = " + stok.countTokens());
+        System.out.println("\n\n");
+
+    //3)
+        str = "root:x:0:0:root:/root:/bin/bash";
+        stok = new StringTokenizer(str, ":");
+
+        System.out.println(str);
+
+
+        int n = stok.countTokens();
+        System.out.println("#tokens = " + n);
+
+        for (int i=0; i<n; i++)
+        {
+            System.out.println("token " + stok.nextToken());
+        }
+
+        //System.out.println("username = " + stok.nextToken());
+        //System.out.println("password = " + stok.nextToken());
+        //System.out.println("userid   = " + stok.nextToken());
+        //System.out.println("groupid  = " + stok.nextToken());
+        //System.out.println("comment  = " + stok.nextToken());
+        //System.out.println("home dir = " + stok.nextToken());
+        //System.out.println("shell    = " + stok.nextToken());
+        //System.out.println("\n\n");
+
+    //4)
+        str = "Hello-world.It is!a nice day,today";
+        stok= new StringTokenizer(str,"-.!, ");
+        
+        System.out.println(str);
+
+        while (stok.hasMoreTokens())
+        {
+            System.out.println("#tokens = " + stok.countTokens());
+            System.out.println("token: " + stok.nextToken());
+        }
+        System.out.println("#tokens = " + stok.countTokens());
+    }
+}
+
+55. [usnjavac Jun16.javjava Jun16
+Hello world
+#tokens = 2
+token: [Hello]
+#tokens = 1
+token: [world]
+#tokens = 0
+Exception in thread "main" java.util.NoSuchElementException
+	at java.util.StringTokenizer.nextToken(StringTokenizer.java:349)
+	at Jun16.main(Jun16.java:21)
+57. [usnivi
+
+        <snip!>  (text deleted from output)
+
+58. [usnick@cs ~]$ 
+58. [usnick@cs ~]$ javac Jun16.java
+59. [usnick@cs ~]$ java Jun16
+Hello world
+#tokens = 2
+token: [Hello]
+#tokens = 1
+token: [world]
+#tokens = 0
+
+
+
+    Hello    world   
+#tokens = 2
+token: [Hello]
+#tokens = 1
+token: [world]
+#tokens = 0
+
+
+
+root:x:0:0:root:/root:/bin/bash
+#tokens = 7
+token [root]
+token [x]
+token [0]
+token [0]
+token [root]
+token [/root]
+token [/bin/bash]
+Hello-world.It is!a nice day,today
+#tokens = 8
+token: [Hello]
+#tokens = 7
+token: [world]
+#tokens = 6
+token: [It]
+#tokens = 5
+token: [is]
+#tokens = 4
+token: [a]
+#tokens = 3
+token: [nice]
+#tokens = 2
+token: [day]
+#tokens = 1
+token: [today]
+#tokens = 0
+60. [usnick@cs ~]$ java Jun16 | more
+
+        <snip!>  (text deleted from output)
+
+61. [usnick@cs ~]$ cp Jun16.java /usr/tmp/PF2
+62. [usnick@cs ~]$ cp Jun16.java lab6
+63. [usnick@cs ~]$ vi lab6
+
+        <snip!>  (text deleted from output)
+
+64. [usnick@cs ~]$ 
+64. [usnick@cs ~]$ 
+64. [usnick@cs ~]$ 
+64. [usnick@cs ~]$ cat lab6
+import java.util.*;
+
+public class Lab6
+{
+    public static void main(String argv[])
+    {
+        String str;
+
+    //1)
+        str = "Hello world";
+        ST stok= new ST(str);
+        
+        System.out.println(str);
+
+        while (stok.hasMoreTokens())
+        {
+            System.out.println("#tokens = " + stok.countTokens());
+            System.out.println("token: [" + stok.nextToken() + "]");
+        }
+        System.out.println("#tokens = " + stok.countTokens());
+        //System.out.println("token: " + stok.nextToken());
+        System.out.println("\n\n");
+
+    //2)
+        str = "    Hello    world   ";
+        stok= new ST(str);
+        
+        System.out.println(str);
+
+        while (stok.hasMoreTokens())
+        {
+            System.out.println("#tokens = " + stok.countTokens());
+            System.out.println("token: [" + stok.nextToken() + "]");
+        }
+        System.out.println("#tokens = " + stok.countTokens());
+        System.out.println("\n\n");
+
+    //3)
+        str = "root:x:0:0:root:/root:/bin/bash";
+        stok = new ST(str, ":");
+
+        System.out.println(str);
+
+
+        int n = stok.countTokens();
+        System.out.println("#tokens = " + n);
+
+        for (int i=0; i<n; i++)
+        {
+            System.out.println("token [" + stok.nextToken() + "]");
+        }
+
+        //System.out.println("username = " + stok.nextToken());
+        //System.out.println("password = " + stok.nextToken());
+        //System.out.println("userid   = " + stok.nextToken());
+        //System.out.println("groupid  = " + stok.nextToken());
+        //System.out.println("comment  = " + stok.nextToken());
+        //System.out.println("home dir = " + stok.nextToken());
+        //System.out.println("shell    = " + stok.nextToken());
+        //System.out.println("\n\n");
+
+    //4)
+        str = "Hello-world.It is!a nice day,today";
+        stok= new ST(str,"-.!, ");
+        
+        System.out.println(str);
+
+        while (stok.hasMoreTokens())
+        {
+            System.out.println("#tokens = " + stok.countTokens());
+            System.out.println("token: [" + stok.nextToken() + "]");
+        }
+        System.out.println("#tokens = " + stok.countTokens());
+    }
+}
+
+65. [usnick@cs ~]$ vi ~/public_html/PF2/lab6/index.html 
+
+        <snip!>  (text deleted from output)
+
+66. [usnick@cs ~]$ htmlize lab6 > lab6.html
+67. [usnick@cs ~]$ cd ~/public_html/PF2/lab6/index.html 
+bash: cd: /home/usnick/public_html/PF2/lab6/index.html: Not a directory
+68. [usnick@cs ~]$ vi
+
+        <snip!>  (text deleted from output)
+
+69. [usnick@cs ~]$ 
+69. [usnick@cs ~]$ 
+69. [usnick@cs ~]$ java Jun16 > output
+70. [usnick@cs ~]$ cat output
+Hello world
+#tokens = 2
+token: [Hello]
+#tokens = 1
+token: [world]
+#tokens = 0
+
+
+
+    Hello    world   
+#tokens = 2
+token: [Hello]
+#tokens = 1
+token: [world]
+#tokens = 0
+
+
+
+root:x:0:0:root:/root:/bin/bash
+#tokens = 7
+token [root]
+token [x]
+token [0]
+token [0]
+token [root]
+token [/root]
+token [/bin/bash]
+Hello-world.It is!a nice day,today
+#tokens = 8
+token: [Hello]
+#tokens = 7
+token: [world]
+#tokens = 6
+token: [It]
+#tokens = 5
+token: [is]
+#tokens = 4
+token: [a]
+#tokens = 3
+token: [nice]
+#tokens = 2
+token: [day]
+#tokens = 1
+token: [today]
+#tokens = 0
+71. [usnick@cvi ~/public_html/PF2/lab6/index.html 
+
+        <snip!>  (text deleted from output)
+
+72. [usnick@cs ~]$ cal
+      June 2016     
+Su Mo Tu We Th Fr Sa
+          1  2  3  4
+ 5  6  7  8  9 10 11
+12 13 14 15 m167m 17 18
+19 20 21 22 23 24 25
+26 27 28 29 30
+
+73. [usnick@cs ~]$ mail usnick
+Subject: PF2 lab6 due 6/23
+.
+EOT
+Null message body; hope that's ok
+74. [usnick@cs ~]$ 
+74. [usnick@cs ~]$ cd
+75. [usnick@cs ~]$ exit
+
+Script done on Thu 16 Jun 2016 12:21:48 PM CDT

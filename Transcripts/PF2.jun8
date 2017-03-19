@@ -1,0 +1,102 @@
+Script started on Wed 08 Jun 2016 11:37:02 AM CDT
+==============================================================================
+ The temperature in Amarillo is  81
+==============================================================================
+[usnick@cs ~]$ nums
+2. [usnick@cs ~]$ 
+2. [usnick@cs ~]$ 
+2. [usnick@cs ~]$ 
+2. [usnick@cs ~]$ vi jun8.txt
+
+        <snip!>  (text deleted from output)
+
+3. [usnick@cs ~]$ 
+3. [usnick@cs ~]$ 
+3. [usnick@cs ~]$ cat jun8.txt
+
+    how to call this copy method???
+
+    b1 = b2.copyMe();   // the winner!
+
+    b2.copyMe(b1);
+
+    copy(bidest, bisrc);
+
+
+    private BigInteger copyMe()
+    {
+        BigInteger biclone = new BigInteger();
+
+        for (int i=0; i<INTSIZ; i++)
+        {
+            biclone.intArray[i] = intArray[i];
+        }
+
+        return biclone;
+    }
+
+    ????  inside subtract???
+    bitmp = b1.copyMe();  not quite;  instead:  bitmp = copyMe();
+    ????
+4. [usnick@cs ~]$ 
+4. [usnick@cs ~]$ 
+4. [usnicPendscript > /usr/tmp/PF1/PF1.jun82Pcp Jun8b.java /usr/tmp/PF1Pjava Jun8b
+4. [usnick@cs ~]$ 
+4. [usnick@cs ~]$ 
+4. [usnick@cs ~]$ vi jun8.txt
+
+        <snip!>  (text deleted from output)
+
+5. [usnick@cs ~]$ cat jun8.txt
+one last change to the subtract method:
+
+    how to call this copy method???
+
+    b1 = b2.copyMe();   // the winner!
+
+    b2.copyMe(b1);
+
+    copy(bidest, bisrc);
+
+
+    private BigInteger copyMe()
+    {
+        BigInteger biclone = new BigInteger();
+
+        for (int i=0; i<INTSIZ; i++)
+        {
+            biclone.intArray[i] = intArray[i];
+        }
+
+        return biclone;
+    }
+
+    ????  inside subtract???
+    bitmp = b1.copyMe();  not quite;  instead:  bitmp = copyMe();
+    ????
+
+======================================================
+
+how to shift a BigInteger???
+
+    shift(n);
+
+    bi.shift(n);
+
+    shift(bi, n);
+
+    private void shift(int n)
+    {
+        for (int i=1; i<INTSIZ; i++)
+        {
+            intArray[i] = intArray[i+1];
+        }
+    }
+6. [usnick@cs ~]$ vi
+
+        <snip!>  (text deleted from output)
+
+7. [usnick@cs ~]$ cp jun8.txt /usr/tmp/PF2/
+8. [usnick@cs ~]$ exit
+
+Script done on Wed 08 Jun 2016 12:46:02 PM CDT

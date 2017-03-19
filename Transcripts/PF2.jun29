@@ -1,0 +1,279 @@
+Script started on Wed 29 Jun 2016 11:39:12 AM CDT
+==============================================================================
+ The temperature in Amarillo is  79
+==============================================================================
+[usnick@cs ~]$ nums
+2. [usnick@cs ~]$ cd PF2/lab7-VPC/
+3. [usnick@cs lab7-VPC]$ 
+3. [usnick@cs lab7-VPC]$ ls -l Assemble*
+-rw-rw-r--. 1 usnick usnick 2220 Mar 31 08:19 Assemble.class
+-rw-rw-r--. 1 usnick usnick 2218 Jul  8  2015 Assemble.java
+-rw-rw-r--. 1 usnick usnick 2218 Jul  8  2015 Assemble.java.bak
+-rw-rw-r--. 1 usnick usnick 1088 Apr 14 14:40 Assemble.pseudo
+4. [usnick@cs lab7-VPC]$ 
+4. [usnick@cs lab7-VPC]$ java Assemble
+usage:  java Assemble INPUTFILE
+5. [usnick@cs lab7-VPC]$ 
+5. [usnick@cs lab7-VPC]$ vi jun29.src
+
+        <snip!>  (text deleted from output)
+
+6. [usnick@cs lab7-VPC]$ 
+6. [usnick@cs lab7-VPC]$ 
+6. [usnick@cs lab7-VPC]$ cat jun29.src
+#
+# this is a comment
+#
+
+READ 80
+HALT 99
+7. [usnick@cs lab7-VPC]$ java Assemble jun29.src
+0880
+0099
+8. [usnick@cs lab7-VPC]$ vi jun29.src
+
+        <snip!>  (text deleted from output)
+
+9. [usnick@cs lab7-VPC]$ 
+9. [usnick@cs lacat
+#
+# this is a comment
+#
+
+RED 80
+HALT 99
+10. [usnick@cs l@java Assemble
+readSrc: unknown opcode: RED
+11. [usnick@cs lvi
+
+        <snip!>  (text deleted from output)
+
+12. [usnick@cs lacat
+#
+# this is a comment
+#
+
+READ 80
+HALT 100
+13. [usnick@cs l@java Assemble
+0880
+opcode = HALT, operand = 100
+operand out of range.
+14. [usnick@cs lvi
+
+        <snip!>  (text deleted from output)
+
+15. [usnick@cs lacat
+#
+# this is a comment
+#
+
+READ 80
+HALT 99
+16. [usnick@cs l@java Assemble
+0880
+0099
+17. [usnick@cs lab7-VPC]$ java Assemble jun29.src > jun29.exe
+18. [usnick@cs lab7-VPC]$ 
+18. [usnick@cs lab7-VPC]$ 
+18. [usnick@cs lab7-VPC]$ catjun29.exe
+bash: catjun29.exe: command not found
+19. [usnick@cs lab7-VPC]$ cat 
+0880
+0099
+20. [usnick@cs lab7-VPC]$ 
+20. [usnick@cs lab7-VPC]$ 
+20. [usnick@cs lab7-VPC]$ ls
+addTwoNumsInteractive.src  averageNums.src	  ifElse.exe  runprog.obfuscate
+addTwoNums.src		   badOpCode.exe	  ifElse.src  S13test2
+apr7.exe		   badOpcode.src	  if.exe      testQ.src
+apr7.src		   badOperand.src	  if.src      test.src
+arithExpr.src		   countDown.exe	  IO.class    VPCrte.class
+Assemble.class		   countDown.src	  IO.java     VPCrte.java
+Assemble.java		   countUp.exe		  jun29.exe   VPCrte.java.bak
+Assemble.java.bak	   countUp.src		  jun29.src   VPCrte.pseudo
+Assemble.pseudo		   divideInteractive.src  o
+assign			   dump			  ops
+averageNums.exe		   files		  pad
+21. [usnick@cs lab7-VPC]$ rm ju29*
+rm: cannot remove `ju29*': No such file or directory
+22. [usnick@cs lab7-VPC]$ rm jun29*
+23. [usnick@cs lab7-VPC]$ rm apr*
+24. [usnick@cs lab7-VPC]$ 
+24. [usnick@cs lab7-VPC]$ java Assemble jun29.src > jun29.exe
+Exception in thread "main" java.io.FileNotFoundException: jun29.src (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:137)
+	at java.io.FileInputStream.<init>(FileInputStream.java:96)
+	at java.io.FileReader.<init>(FileReader.java:58)
+	at Assemble.readSrc(Assemble.java:28)
+	at Assemble.main(Assemble.java:76)
+25. [usnick@cs lab7-VPC]$ 
+25. [usnick@cs lab7-VPC]$ cp IO.java /usr/tmp/PF2
+26. [usnick@cs lab7-VPC]$ vi IO.java
+
+        <snip!>  (text deleted from output)
+
+27. [usnick@cs lab7-VPC]$ 
+27. [usnick@cs lab7-VPC]$ 
+27. [usnick@cs lab7-VPC]$ cp /etc/hosts .
+28. [usnick@cs lab7-VPC]$ echo $?
+0
+29. [usnick@cs lab7-VPC]$ 
+29. [usnick@cs lab7-VPC]$ cp /etc/hosts /
+cp: cannot create regular file `/hosts': Permission denied
+30. [usnick@cs lab7-VPC]$ echo $?
+1
+31. [usnick@cs lab7-VPC]$ 
+31. [usnick@cs lab7-VPC]$ cp /etc/hosts /
+cp: cannot create regular file `/hosts': Permission denied
+32. [usnick@cs lab7-VPC]$ ls
+addTwoNumsInteractive.src  badOpCode.exe	  hosts       pad
+addTwoNums.src		   badOpcode.src	  ifElse.exe  runprog.obfuscate
+arithExpr.src		   badOperand.src	  ifElse.src  S13test2
+Assemble.class		   countDown.exe	  if.exe      testQ.src
+Assemble.java		   countDown.src	  if.src      test.src
+Assemble.java.bak	   countUp.exe		  IO.class    VPCrte.class
+Assemble.pseudo		   countUp.src		  IO.java     VPCrte.java
+assign			   divideInteractive.src  jun29.exe   VPCrte.java.bak
+averageNums.exe		   dump			  o	      VPCrte.pseudo
+averageNums.src		   files		  ops
+33. [usnick@cs lab7-VPC]$ echo $?
+0
+34. [usnick@cs lab7-VPC]$ vi IO.java
+
+        <snip!>  (text deleted from output)
+
+35. [usnick@cs lab7-VPC]$ 
+35. [usnick@cs lab7-VPC]$ javac IO.java
+36. [usnick@cs lab7-VPC]$ java IO
+You must supply a file name!
+37. [usnick@cs lab7-VPC]$ java IO /etc/hosts
+[127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4]
+[::1         localhost localhost.localdomain localhost6 localhost6.localdomain6]
+38. [usnick@cs lab7-VPC]$ 
+38. [usnick@cs lab7-VPC]$ 
+38. [usnick@cs lab7-VPC]$ java IO IO.java
+[import java.io.*;]
+[]
+[public class IO]
+[{]
+[    public static void main(String argv[]) throws IOException]
+[    { ]
+[        String buffer = null;]
+[]
+[        if (argv.length != 1) {]
+[            System.out.println("You must supply a file name!");]
+[            System.exit(0);]
+[        }]
+[]
+[        FileReader fr     = new FileReader(argv[0]);]
+[        BufferedReader br = new BufferedReader(fr);]
+[]
+[        while ((buffer = br.readLine()) != null) {]
+[            System.out.println("[" + buffer + "]");]
+[        } ]
+[    }]
+[}]
+[]
+39. [usnick@cs lab7-VPC]$ 
+39. [usnick@cs lab7-VPC]$ 
+39. [usnick@cs lab7-VPC]$ ls
+addTwoNumsInteractive.src  badOpCode.exe	  hosts       pad
+addTwoNums.src		   badOpcode.src	  ifElse.exe  runprog.obfuscate
+arithExpr.src		   badOperand.src	  ifElse.src  S13test2
+Assemble.class		   countDown.exe	  if.exe      testQ.src
+Assemble.java		   countDown.src	  if.src      test.src
+Assemble.java.bak	   countUp.exe		  IO.class    VPCrte.class
+Assemble.pseudo		   countUp.src		  IO.java     VPCrte.java
+assign			   divideInteractive.src  jun29.exe   VPCrte.java.bak
+averageNums.exe		   dump			  o	      VPCrte.pseudo
+averageNums.src		   files		  ops
+40. [usnick@cs lab7-VPC]$ cp Assemble.pseudo /usr/tmp/PF2
+41. [usnick@cs lab7-VPC]$ vi Assemble.pseudo
+
+        <snip!>  (text deleted from output)
+
+42. [usnick@cs lab7-VPC]$ cd
+43. [usnick@cs ~]$ ls
+adm  Jun29b.class  Jun29c.java	misc	PF2  public_html  typescript
+bin  Jun29b.java   Jun29.class	mobile	PF3  tmp	  unix
+etc  Jun29c.class  Jun29.java	PF1	PTK  tools
+44. [usnick@cs ~]$ vi Jun29.java
+
+        <snip!>  (text deleted from output)
+
+45. [usnick@cs ~]$ cat Jun29.java
+public class Jun29
+{
+    public static void main(String args[])
+    {
+        int i = 09;
+    }
+}
+46. [usnick@cs ~]$ javac Jun29.java
+Jun29.java:5: integer number too large: 09
+        int i = 09;
+                ^
+1 error
+47. [usnivi
+
+        <snip!>  (text deleted from output)
+
+48. [usnPcat
+public class Jun29
+{
+    public static void main(String args[])
+    {
+        int i = 07;
+    }
+}
+49. [usnjavac
+50. [usnivi
+
+        <snip!>  (text deleted from output)
+
+51. [usnPcat
+public class Jun29
+{
+    public static void main(String args[])
+    {
+        int i = 010;
+
+        System.out.println("i = " + i);
+    }
+}
+52. [usnjavac
+53. [usnick@cs ~]$ java Jun29
+i = 8
+54. [usnick@cs ~]$ cd PF2/lab7-VPC/
+55. [usnick@cs lab7-VPC]$ vi Assemble.pseudo 
+
+        <snip!>  (text deleted from output)
+
+56. [usnick@cs lab7-VPC]$ more Assemble.pseudo56. [usnick@cs lab7-VPC]$ more Assemble.pseudo
+
+        <snip!>  (text deleted from output)
+
+57. [usnick@cs lab7-VPC]$ 57. [usnick@cs lab7-VPC]$ 
+57. [usnick@cs lab7-VPC]$ 
+57. [usnick@cs lab7-VPC]$ 
+57. [usnick@cs lab7-VPC]$ # pad(4,2)   =>    "04"
+57. [usnick@cs lab7-VPC]$ # pad(2,4)   =>    "0002"
+57. [usnick@cs lab7-VPC]$ vi Assemble.java
+
+        <snip!>  (text deleted from output)
+
+58. [usnick@cs lab7-VPC]$ #more Assemble.pseudo
+58. [usnick@cs lab7-VPC]$ vi Assemble.pseudo
+
+        <snip!>  (text deleted from output)
+
+59. [usnick@cs lab7-VPC]$ vi Assemble.pseudo
+59. [usnick@cs lab7-VPC]$ 
+59. [usnick@cs lab7-VPC]$ 
+59. [usnick@cs lab7-VPC]$ # ..println("[" + pad(4,2) + "]");
+59. [usnick@cs lab7-VPC]$ 
+59. [usnick@cs lab7-VPC]$ exit
+
+Script done on Wed 29 Jun 2016 01:09:33 PM CDT

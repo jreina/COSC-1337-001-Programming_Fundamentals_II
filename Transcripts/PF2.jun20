@@ -1,0 +1,29 @@
+Script started on Mon 20 Jun 2016 12:36:09 PM CDT
+==============================================================================
+ The temperature in Amarillo is  87
+==============================================================================
+[usnick@cs ~]$ nums
+2. [usnick@cs ~]$ cat Jun20.java
+public class Jun20
+{
+    public static void main(String args[])
+    {
+        int i=5;
+
+        i = i++;
+
+        System.out.println("i = " + i);
+    }
+}
+3. [usnick@cs ~]$ javac Jun10.java
+javac: file not found: Jun10.java
+Usage: javac <options> <source files>
+use -help for a list of possible options
+4. [usnick@cs ~]$ javac Jun2
+5. [usnick@cs ~]$ 
+5. [usnick@cs ~]$ java Jun20
+i = 5
+6. [usnick@cs ~]$ cp Jun20.java /usr/tmp/PF2
+7. [usnick@cs ~]$ exit
+
+Script done on Mon 20 Jun 2016 12:52:10 PM CDT

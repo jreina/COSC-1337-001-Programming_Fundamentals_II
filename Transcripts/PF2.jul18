@@ -1,0 +1,658 @@
+Script started on Mon 18 Jul 2016 11:47:12 AM CDT
+==============================================================================
+ The temperature in Amarillo is  87
+==============================================================================
+[usnick@cs ~]$ nums
+2. [usnick@cs ~]$ cd
+3. [usnick@cs ~]$ cd public_html/PF2
+4. [usnick@cs PF2]$ ls -l
+total 48
+drwx------. 2 usnick usnick 4096 May 23  2010 imagedemo
+drwx------. 2 usnick usnick 4096 May  3 07:22 lab0
+drwx------. 2 usnick usnick 4096 May 31 18:48 lab1
+drwx------. 2 usnick usnick 4096 May 31 18:48 lab2
+drwx------. 2 usnick usnick 4096 Jun  1 11:28 lab3
+drwx------. 2 usnick usnick 4096 Jun  9 11:47 lab4
+drwx------. 2 usnick usnick 4096 May 31 18:48 lab5
+drwx------. 2 usnick usnick 4096 Jun 26 12:07 lab6
+drwx--x--x. 2 usnick usnick 4096 Jul 12 08:27 lab7
+drwx--x--x. 2 usnick usnick 4096 Jul 11 18:18 lab8
+drwx------. 2 usnick usnick 4096 May 31 18:48 lab9
+drwx------. 2 usnick usnick 4096 May 23  2010 mouselistener
+5. [usnick@cs PF2]$ chmod 700 *
+6. [usnick@cs PF2]$ chmod 711 lab9
+7. [usnick@cs PF2]$ vi mydata
+
+        <snip!>  (text deleted from output)
+
+8. [usnick@cs PF2]$ 
+8. [usnick@cs PF2]$ 
+8. [usnick@cs PF2]$ cat mydata
+07,08,40212020394278514724625340347773081034321960493042001404
+9. [usnick@cs PF2]$ od -c mydata
+0000000   0   7   ,   0   8   ,   4   0   2   1   2   0   2   0   3   9
+0000020   4   2   7   8   5   1   4   7   2   4   6   2   5   3   4   0
+0000040   3   4   7   7   7   3   0   8   1   0   3   4   3   2   1   9
+0000060   6   0   4   9   3   0   4   2   0   0   1   4   0   4  \n
+0000077
+10. [usnick@cs PF2]$ 
+10. [usnick@cs PF2]$ 
+10. [usnick@cs PF2]$ rm mydata
+11. [usnick@cs PF2]$ cd
+12. [usnick@cs ~]$ 
+12. [usnick@cs ~]$ vi Jul18.java
+
+        <snip!>  (text deleted from output)
+
+13. [usnick@cs ~]$ 
+13. [usnick@cs ~]$ 
+13. [usnick@cs ~]$ cat Jul18.java
+import java.io.*;
+
+public class Jul18
+{
+    public static void main(String args[])
+    {
+        InputStreamReader reader = new InputStreamReader(System.in);
+
+        int ten, one;
+
+        ten = reader.read();
+
+        System.out.println("ten " + ten);
+    }
+}
+14. [usnick@cs ~]$ javac Jul18.java
+Jul18.java:11: unreported exception java.io.IOException; must be caught or declared to be thrown
+        ten = reader.read();
+                         ^
+1 error
+15. [usnivi
+
+        <snip!>  (text deleted from output)
+
+16. [usnPcat
+import java.io.*;
+
+public class Jul18
+{
+    public static void main(String args[]) throws java.io.IOException
+    {
+        InputStreamReader reader = new InputStreamReader(System.in);
+
+        int ten, one;
+
+        ten = reader.read();
+
+        System.out.println("ten " + ten);
+    }
+}
+17. [usnjavac
+18. [usnick@cs ~]$ 
+18. [usnick@cs ~]$ java Jul18
+hello
+ten 104
+19. [usnick@cs ~]$ vi myfile
+
+        <snip!>  (text deleted from output)
+
+20. [usnick@cs ~]$ cat myfile
+hello
+21. [usnick@cs ~]$ 
+21. [usnick@cs ~]$ java Jul18 < myfile
+ten 104
+22. [usnick@cs ~]$ 
+22. [usnick@cs ~]$ man ascii
+
+        <snip!>  (text deleted from output)
+
+23. [usnick@cs ~]$ vi Jul18.java
+
+        <snip!>  (text deleted from output)
+
+24. [usnick@cs ~]$ Pcat
+hello
+25. [uPcat
+import java.io.*;
+
+public class Jul18
+{
+    public static void main(String args[]) throws java.io.IOException
+    {
+        InputStreamReader reader = new InputStreamReader(System.in);
+
+        int ten, one;
+
+        ten = reader.read();
+
+        System.out.println("ten " + ten);
+        System.out.println("ten " + (char) ten);
+    }
+}
+26. [ujavac Jul18.java
+27. [usnijava Jul18 < myfile
+ten 104
+ten h
+28. [usnivi Jul18.java
+
+        <snip!>  (text deleted from output)
+
+29. [usnick@cs ~]$ 
+29. [usnick@cs ~]$ 
+29. [usnick@cs ~]$ java Jul18 7
+7
+ten 55
+ten 7
+30. [usnick@cs ~]$ man ascii
+
+        <snip!>  (text deleted from output)
+
+31. [usnick@cs ~]$ 
+31. [usnick@cs ~]$ 
+31. [usnick@cs ~]$ # '7' == 55
+31. [usnick@cs ~]$ 
+31. [usnick@cs ~]$ 31. [usnick@cs ~]$ 
+31. [usnick@cs ~]$ 
+31. [usnick@cs ~]$ man ascii
+
+        <snip!>  (text deleted from output)
+
+32. [usnick@cs ~]$ 
+32. [usnick@cs ~]$ 
+32. [usnick@cs ~]$ man ascii
+
+        <snip!>  (text deleted from output)
+
+33. [usnick@cs ~]$ 
+33. [usnick@cs ~]$ 
+33. [usnick@cs ~]$ vi Jul18.java
+
+        <snip!>  (text deleted from output)
+
+34. [usnick@cs ~]$ 
+34. [usnick@cs ~]$ 
+34. [usnick@cs ~]$ cat Jul18.java
+import java.io.*;
+
+public class Jul18
+{
+    public static void main(String args[]) throws java.io.IOException
+    {
+        InputStreamReader reader = new InputStreamReader(System.in);
+
+        int ten, one;
+
+        ten = reader.read();
+
+        System.out.println("ten " + ten);
+        System.out.println("ten " + (char) ten);
+
+        one = reader.read();
+
+        System.out.println("one " + one);
+        System.out.println("one " + (char) one);
+    }
+    }
+}
+35. [usnick@cs ~]$ javac Jul18.java
+Jul18.java:22: class, interface, or enum expected
+}
+^
+1 error
+36. [usnivi
+
+        <snip!>  (text deleted from output)
+
+
+        <snip!>  (text deleted from output)
+
+38. [usnPcat
+import java.io.*;
+
+public class Jul18
+{
+    public static void main(String args[]) throws java.io.IOException
+    {
+        InputStreamReader reader = new InputStreamReader(System.in);
+
+        int ten, one;
+
+        ten = reader.read();
+
+        System.out.println("ten " + ten);
+        System.out.println("ten " + (char) ten);
+
+        one = reader.read();
+
+        System.out.println("one " + one);
+        System.out.println("one " + (char) one);
+    }
+}
+39. [usnjavac
+40. [usnick@cs ~]$ cp Jul18.java /usr/tmp/PF2
+41. [usnick@cs ~]$ java Jul18
+12345
+ten 49
+ten 1
+one 50
+one 2
+42. [usnick@cs ~]$ vi Jul18.java
+
+        <snip!>  (text deleted from output)
+
+43. [usnick@cs ~]$ cp Jucat
+import java.io.*;
+
+public class Jul18
+{
+    public static void main(String args[]) throws java.io.IOException
+    {
+        InputStreamReader reader = new InputStreamReader(System.in);
+
+        int ten, one;
+
+        ten = reader.read();
+
+        System.out.println("ten " + ten);
+        System.out.println("ten " + (char) ten);
+
+        one = reader.read();
+
+        System.out.println("one " + one);
+        System.out.println("one " + (char) one);
+
+        System.out.println("The Number = " + ten + one);
+    }
+}
+44. [usncp Jul18.java /usr/tmp/PF2Pcp Jul18.java /u@javajava Jul18
+1234
+ten 49
+ten 1
+one 50
+one 2
+The Number = 4950
+46. [usnivi
+
+        <snip!>  (text deleted from output)
+
+47. [usnick@cs ~]$ Pcat
+import java.io.*;
+
+public class Jul18
+{
+    public static void main(String args[]) throws java.io.IOException
+    {
+        InputStreamReader reader = new InputStreamReader(System.in);
+
+        int ten, one;
+
+        ten = reader.read();
+
+        System.out.println("ten " + ten);
+        System.out.println("ten " + (char) ten);
+
+        one = reader.read();
+
+        System.out.println("one " + one);
+        System.out.println("one " + (char) one);
+
+        String s = "" + (char) ten + (char) one);
+        System.out.println("The Number = " + s);
+    }
+}
+48. [usnjavac Jul18.java
+Jul18.java:21: ';' expected
+        String s = "" + (char) ten + (char) one);
+                                               ^
+1 error
+49. [usnivi
+
+        <snip!>  (text deleted Pcat
+import java.io.*;
+
+public class Jul18
+{
+    public static void main(String args[]) throws java.io.IOException
+    {
+        InputStreamReader reader = new InputStreamReader(System.in);
+
+        int ten, one;
+
+        ten = reader.read();
+
+        System.out.println("ten " + ten);
+        System.out.println("ten " + (char) ten);
+
+        one = reader.read();
+
+        System.out.println("one " + one);
+        System.out.println("one " + (char) one);
+
+        String s = "" + (char) ten + (char) one;
+        System.out.println("The Number = " + s);
+    }
+}
+51. [usnjavac
+52. [usnick@cs ~]$ java Jul18
+1234
+ten 49
+ten 1
+one 50
+one 2
+The Number = 12
+53. [usnivi
+
+        <snip!>  (text deleted from output)
+
+54. [usnick@cs ~]$ Pcat
+import java.io.*;
+
+public class Jul18
+{
+    public static void main(String args[]) throws java.io.IOException
+    {
+        InputStreamReader reader = new InputStreamReader(System.in);
+
+        int ten, one;
+
+        ten = reader.read();
+
+        System.out.println("ten " + ten);
+        System.out.println("ten " + (char) ten);
+
+        one = reader.read();
+
+        System.out.println("one " + one);
+        System.out.println("one " + (char) one);
+
+        String s = "" + (char) ten + (char) one;
+        System.out.println("The Number = " + s);
+
+        int n;
+
+        n = 10 * ten + one;
+        System.out.println("n = " + n);
+    }
+}
+55. [usnjavac Jul18.javjava Jul18
+1234
+ten 49
+ten 1
+one 50
+one 2
+The Number = 12
+n = 540
+57. [usnick@cs ~]$ 
+57. [usnick@cs ~]$ 
+57. [usnick@cs ~]$ 
+57. [usnick@cs ~]$ man ascii
+
+        <snip!>  (text deleted from output)
+
+58. [usnick@cs ~]$ 
+58. [usnick@cs ~]$ 
+58. [usnick@cs ~]$ vi Jul18.java
+
+        <snip!>  (text deleted from output)
+
+59. [usnick@cs ~]$ 
+59. [usnick@cs ~]$ 
+59. [usnick@cs ~]$ 
+59. [usnick@cs ~]$ cat Jul18.java
+import java.io.*;
+
+public class Jul18
+{
+    public static void main(String args[]) throws java.io.IOException
+    {
+        InputStreamReader reader = new InputStreamReader(System.in);
+
+        int ten, one;
+
+        ten = reader.read();
+
+        ten = ten - 48;
+
+        System.out.println("ten " + ten);
+
+        one = reader.read();
+
+        one = one - 48;
+
+        System.out.println("one " + one);
+
+        //String s = "" + (char) ten + (char) one;
+        //System.out.println("The Number = " + s);
+
+        int n;
+
+        //n = 10 * ten + one;
+        //System.out.println("n = " + n);
+    }
+}
+60. [usnick@cs ~]$ javac Jul18.java
+61. [usnick@cs ~]$ java Jul18
+12345
+ten 1
+one 2
+62. [usnivi
+
+        <snip!>  (text deleted from output)
+
+63. [usnick@cs ~]$ Pcat
+import java.io.*;
+
+public class Jul18
+{
+    public static void main(String args[]) throws java.io.IOException
+    {
+        InputStreamReader reader = new InputStreamReader(System.in);
+
+        int ten, one;
+
+        ten = reader.read();
+
+        ten = ten - 48;
+
+        System.out.println("ten " + ten);
+
+        one = reader.read();
+
+        one = one - 48;
+
+        System.out.println("one " + one);
+
+        //String s = "" + (char) ten + (char) one;
+        //System.out.println("The Number = " + s);
+
+        int n;
+
+        n = 10*ten + one;
+        System.out.println("n = " + n);
+    }
+}
+64. [usnjavac Jul18.javjava Jul18
+1234
+ten 1
+one 2
+n = 12
+66. [usnick@cs ~]$ 
+66. [usnick@cs ~]$ 
+66. [usnick@cs ~]$ vi mydata
+
+        <snip!>  (text deleted from output)
+
+67. [usnick@cs ~]$ cat mydata
+12,123456789012
+68. [usnick@cs ~]$ 
+68. [usnick@cs ~]$ 
+68. [usnick@cs ~]$ vi Jul18.java
+
+        <snip!>  (text deleted from output)
+
+69. [usnick@cs ~]$ 
+69. [usnick@cs ~]$ 
+69. [usnick@cat
+12,123456789012
+70. [usnick@cs ~]$ cat Jul18.java
+import java.io.*;
+
+public class Jul18
+{
+    public static void main(String args[]) throws java.io.IOException
+    {
+        InputStreamReader reader = new InputStreamReader(System.in);
+
+        int ten, one;
+
+        ten = reader.read();
+
+        ten = ten - 48;
+
+        System.out.println("ten " + ten);
+
+        one = reader.read();
+
+        one = one - 48;
+
+        System.out.println("one " + one);
+
+        //String s = "" + (char) ten + (char) one;
+        //System.out.println("The Number = " + s);
+
+        int n;
+
+        n = 10*ten + one;
+        System.out.println("n = " + n);
+
+        for (int i=0; i<n; i++)
+        {
+            char c = (char) reader.read();
+            System.out.println(c);
+        }
+    }
+}
+71. [usnick@cs ~]$ javac Jul18.java
+72. [usnick@cs ~]$ java Jul18 < mydata
+ten 1
+one 2
+n = 12
+,
+1
+2
+3
+4
+5
+6
+7
+8
+9
+0
+1
+73. [usnivi Jul18.java
+
+        <snip!>  (text deleted from output)
+
+74. [usnick@cs ~]$ Pcat
+import java.io.*;
+
+public class Jul18
+{
+    public static void main(String args[]) throws java.io.IOException
+    {
+        InputStreamReader reader = new InputStreamReader(System.in);
+
+        int ten, one;
+
+        ten = reader.read();
+
+        ten = ten - 48;
+
+        System.out.println("ten " + ten);
+
+        one = reader.read();
+
+        one = one - 48;
+
+        System.out.println("one " + one);
+
+        //String s = "" + (char) ten + (char) one;
+        //System.out.println("The Number = " + s);
+
+        int n;
+
+        reader.read();   // skip over the comma!
+
+        n = 10*ten + one;
+        System.out.println("n = " + n);
+
+        for (int i=0; i<n; i++)
+        {
+            char c = (char) reader.read();
+            System.out.println(c);
+        }
+    }
+}
+75. [usnjavac Jul18.javjava Jul18 < mydata
+ten 1
+one 2
+n = 12
+1
+2
+3
+4
+5
+6
+7
+8
+9
+0
+1
+2
+77. [usnick@cs ~]$ 
+77. [usnick@cs ~]$ 
+77. [usnick@cs ~]$ java Jul18
+05,12345
+ten 0
+one 5
+n = 5
+1
+2
+3
+4
+5
+78. [usnick@cs ~]$ java Jul18
+25,12345678901234567890123456789
+ten 2
+one 5
+n = 25
+1
+2
+3
+4
+5
+6
+7
+8
+9
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+0
+1
+2
+3
+4
+5
+79. [usnick@cs ~]$ cp Jul18.java /usr/tmp/PF2
+80. [usnick@cs ~]$ 
+80. [usnick@cs ~]$ exit
+
+Script done on Mon 18 Jul 2016 01:23:45 PM CDT

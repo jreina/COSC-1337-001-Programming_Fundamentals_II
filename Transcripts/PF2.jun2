@@ -1,0 +1,68 @@
+Script started on Thu 02 Jun 2016 11:35:52 AM CDT
+==============================================================================
+ The temperature in Amarillo is  66
+==============================================================================
+[usnick@cs ~]$ nums
+2. [usnick@cs ~]$ 
+2. [usnick@cs ~]$ 
+2. [usnick@cs ~]$ cd PF2/*primes*
+3. [usnick@cs lab1&2primes]$ 
+3. [usnick@cs lab1&2primes]$ ls
+ans		files		Main0a.java  Main1.java   Main3.java
+assign.lab1	Lab1hint.java	Main0b.java  Main2.class  Main4b.java
+assign.lab2	Lab2hint2.java	Main1a.java  Main2.java   Main4.java
+assign.lab2alt	Lab2hint.java	Main1.class  Main3.class  runem.sh
+4. [usnick@cs lab1&2primes]$ cd ..
+5. [usnick@cs PF2]$ ls
+6. [usnick@cs PF2]$ cd 
+7. [usnick@cs ~]$ cd *Sieve
+bash: cd: *Sieve: No such file or directory
+8. [usnick@cs ~]$ cd PF2
+9. [usnick@cs PF2]$ cd *Sieve
+10. [usnick@cs lab3-Sieve]$ ls
+assign	Lab3.java  Lab3start.java  Lab3verbose.class  Lab3verbose.java	notes
+11. [usnick@cs lab3-Sieve]$ vi Lab3start.java
+
+        <snip!>  (text deleted from output)
+
+12. [usnick@cs lab3-Sieve]$ 
+12. [usnick@cs lab3-Sieve]$ 
+12. [usnick@cs lab3-Sieve]$ 
+12. [usnick@cs lab3-Sieve]$ 
+12. [usnick@cs lab3-Sieve]$ 
+12. [usnick@cs lab3-Sieve]$ # if (primeArray[n-1] != 0) return true;
+12. [usnick@cs lab3-Sieve]$ 
+12. [usnick@cs lab3-Sieve]$ # else return false;
+12. [usnick@cs lab3-Sieve]$ 
+12. [usnick@cs lab3-Sieve]$ 
+12. [usnick@cs lab3-Sieve]$ 
+12. [usnick@cs lab3-Sieve]$ 
+12. [usnick@cs lab3-Sieve]$ 
+12. [usnick@cs lab3-Sieve]$ return (primeArray[n-1] != 0);
+bash: syntax error near unexpected token `primeArray[n-1]'
+12. [usnick@cs lab3-Sieve]$ 
+12. [usnick@cs lab3-Sieve]$ 
+12. [usnick@cs lab3-Sieve]$ # return (primeArray[n] == n)   OR?   != 0
+12. [usnick@cs lab3-Sieve]$ 
+12. [usnick@cs lab3-Sieve]$ 
+12. [usnick@cs lab3-Sieve]$ # if (primeArray[n] == true) return true;
+12. [usnick@cs lab3-Sieve]$ # else return false;
+12. [usnick@cs lab3-Sieve]$ 
+12. [usnick@cs lab3-Sieve]$ 
+12. [usnick@cs lab3-Sieve]$ # return (primeArray[n] == true);
+12. [usnick@cs lab3-Sieve]$ 
+12. [usnick@cs lab3-Sieve]$ # return primeArray[n];
+12. [usnick@cs lab3-Sieve]$ 
+12. [usnick@cs lab3-Sieve]$ vi Lab3start.java 
+
+        <snip!>  (text deleted from output)
+
+13. [usnick@cs lab3-Sieve]$ cp Lab3start.java /usr/tmp/PF2
+14. [usnick@cs lab3-Sieve]$ 
+14. [usnick@cs lab3-Sieve]$ vi Lab3start.java
+
+        <snip!>  (text deleted from output)
+
+15. [usnick@cs lab3-Sieve]$ exit
+
+Script done on Thu 02 Jun 2016 12:40:55 PM CDT

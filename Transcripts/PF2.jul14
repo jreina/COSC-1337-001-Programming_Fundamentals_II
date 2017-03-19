@@ -1,0 +1,249 @@
+Script started on Thu 14 Jul 2016 11:41:38 AM CDT
+==============================================================================
+ The temperature in Amarillo is  91
+==============================================================================
+[usnick@cs ~]$ nums
+2. [usnick@cs ~]$ 
+2. [usnick@cs ~]$ cal
+      July 2016     
+Su Mo Tu We Th Fr Sa
+                1  2
+ 3  4  5  6  7  8  9
+10 11 12 13 m147m 15 16
+17 18 19 20 21 22 23
+24 25 26 27 28 29 30
+31
+3. [usnick@cs ~]$ 
+3. [usnick@cs ~]$ ls PF2/exceptions/
+Exception1.java   Exception3.java  Exception6.java
+Exception2.java   Exception4.java  Exception7.java
+Exception3b.java  Exception5.java  Exception8.java
+4. [usnick@cs ~]$ cp PF2/exceptions/Exception1.java .
+5. [usnick@cs ~]$ cp Exception1.java /usr/tmp/PF2
+6. [usnick@cs ~]$ 
+6. [usnick@cs ~]$ vi Exception1.java
+
+        <snip!>  (text deleted from output)
+
+7. [usnick@cs ~]$ cat Exception1.java
+import java.io.*;
+
+public class Exception1
+{
+    public static int inputWholeNumber() throws IOException
+    {
+        BufferedReader input = new BufferedReader
+                              (new InputStreamReader(System.in));
+        String str;
+        int n;
+
+        System.out.print("enter a whole number:  ");
+        str = input.readLine();
+
+        n = Integer.parseInt(str);
+
+        return n;
+    }
+
+    public static void main(String argv[]) throws IOException
+    {
+        int myint;
+
+        while (true) {
+            myint = inputWholeNumber();
+            System.out.println("myint = " + myint);
+        }
+    }
+}
+8. [usnick@cs ~]$ javac Exception1.java
+9. [usnick@cs ~]$ java Exception1
+enter a whole number:  4
+myint = 4
+enter a whole number:  5
+myint = 5
+enter a whole number:  6
+myint = 6
+enter a whole number:  7
+myint = 7
+enter a whole number:  ^C10. [usnick@cs ~]$ 
+10. [usnick@cs ~]$ 
+10. [usnick@cs ~]$ 
+10. [usnick@cs ~]$ 
+10. [usnick@cs ~]$ cp PF2/exceptions/Exception2.java .
+11. [usnick@cs ~]$ cp Exception2.java /usr/tmp/PF2
+12. [usnick@cs ~]$ vi Exception2.java
+
+        <snip!>  (text deleted from output)
+
+13. [usnick@cs ~]$ javac Exception2.java
+14. [usnick@cs ~]$ javac Exception2.javavi
+
+        <snip!>  (text deleted from output)
+
+15. [usnick@cs ~]$ 
+15. [usnick@cs ~]$ cp PF2/exceptions/Exception3.java .
+16. [usnick@cs ~]$ cp Exception3.java /usr/tmp/PF2
+17. [usnick@cs ~]$ 
+17. [usnick@cs ~]$ vi Exception3.java
+
+        <snip!>  (text deleted from output)
+
+18. [usnick@cs ~]$ javac Exception3.java
+19. [usnick@cs ~]$ java Exception3
+enter a whole number:  4
+before parseInt
+after parseInt
+bottom of inputWholeNumber, returning 4
+myint = 4
+enter a whole number:  5
+before parseInt
+after parseInt
+bottom of inputWholeNumber, returning 5
+myint = 5
+enter a whole number:  bob
+before parseInt
+Non Integer input.  Try again
+bottom of inputWholeNumber, returning -1
+myint = -1
+enter a whole number:  ^C20. [usnick@cs ~]$ 
+20. [usnick@cs ~]$ 
+20. [usnick@cs ~]$ cp PF2/exceptions/Exception4.java .
+21. [usnick@cs ~]$ cp Exception4.java /usr/tmp/PF2
+22. [usnick@cs ~]$ vi Exception4.java
+
+        <snip!>  (text deleted from output)
+
+23. [usnick@cs ~]$ 
+23. [usnick@cs ~]$ javac Exception4.java
+24. [usnick@cs ~]$ java Exception4
+enter a whole number:  3
+THE END of inputWholeNumber
+myint = 3
+enter a whole number:  4
+THE END of inputWholeNumber
+myint = 4
+enter a whole number:  5
+THE END of inputWholeNumber
+myint = 5
+enter a whole number:  -2
+Exception in thread "main" java.lang.NumberFormatException: Not a Whole Number
+	at Exception4.inputWholeNumber(Exception4.java:27)
+	at Exception4.main(Exception4.java:42)
+25. [usnick@cs ~]$ 
+25. [usnick@cs ~]$ 
+25. [usnick@cs ~]$ cpPF2
+cp: missing destination file operand after `PF2/exception/Exception5.java'
+Try `cp --help' for more information.
+26. [usnick@cs ~]$ cp PF2/exceptions
+cp: missing destination file operand after `PF2/exceptions/Exception5.java'
+Try `cp --help' for more information.
+27. [usnick@cs ~]$s.
+28. [usnick@cs ~]$ 
+28. [usnick@cs ~]$ 
+28. [usnick@cs ~]$ cp Exception5.java /usr/tmp/PF2
+29. [usnick@cs ~]$ vi Exception5.java
+
+        <snip!>  (text deleted from output)
+
+30. [usnick@cs ~]$ 
+30. [usnick@cs ~]$ 
+30. [usnick@cs ~]$ javac Exception5.java
+java31. [usnick@cs ~]$ java Exception5
+BEFORE inputWholeNumber
+enter a whole number:  5
+Bottom of inputWholeNumber!
+AFTER inputWholeNumber
+myint = 5
+BEFORE inputWholeNumber
+enter a whole number:  6
+Bottom of inputWholeNumber!
+AFTER inputWholeNumber
+myint = 6
+BEFORE inputWholeNumber
+enter a whole number:  bob
+Number Format Error
+message = For input string: "bob"
+myint = -1
+BEFORE inputWholeNumber
+enter a whole number:  -1
+Number Format Error
+message = not a WHOLE NUMBER
+myint = -1
+BEFORE inputWholeNumber
+enter a whole number:  ^C32. [usnick@cs ~]$ javaccp Exception5.java P Exception5
+32. [usnick@cs ~]$ 
+32. [usnick@cs ~]$ 
+32. [usnick@cs ~]$ cp PF2/exceptions/Exception6.java .
+33. [usnick@cs ~]$ cp Exception6.java /usr/tmp/PF2
+34. [usnick@cs ~]$ vi Exception6.java
+
+        <snip!>  (text deleted from output)
+
+35. [usnick@cs ~]$ 
+35. [usnick@cs ~]$ javac Exception6.java
+36. [usnick@cs ~]$ java Exception6
+enter a whole number:  5
+Bottom of inputWholeNumber!
+myint = 5
+enter a whole number:  bob
+message = For input string: "bob"
+myint = -1
+enter a whole number:  -1
+message = Not a WHOLE NUMBER
+myint = -1
+enter a whole number:  ^C37. [usnick@cs ~]$ 
+37. [usnick@cs ~]$ 
+37. [usnick@cs ~]$ 
+37. [usnick@cs ~]$ 
+37. [usnick@cs ~]$ cp PF2/exceptions/Exception7.java .
+38. [usnick@cs ~]$ vi Exception7.java
+
+        <snip!>  (text deleted from output)
+
+39. [usnick@cs ~]$ 
+39. [usnick@cs ~]$ cp Exception7.java /usr/tmp/PF2
+40. [usnick@cs ~]$ vi Exception7.java
+
+        <snip!>  (text deleted from output)
+
+41. [usnick@cs ~]$ javac Exception7.java
+42. [usnick@cs ~]$ java Exception7
+i = 0
+i = 1
+i = 2
+i = 3
+i = 4
+i = 5
+i = 6
+i = 7
+i = 8
+i = 9
+i = 10
+No problem!
+43. [usnick@cs ~]$ 
+43. [usnick@cs ~]$ ls PF2/exceptions/
+Exception1.java   Exception3.java  Exception6.java
+Exception2.java   Exception4.java  Exception7.java
+Exception3b.java  Exception5.java  Exception8.java
+44. [usnick@cs ~]$ cp PF2/exceptions/Exception8.java .
+45. [usnick@cs ~]$ vi Exception8.java
+
+        <snip!>  (text deleted from output)
+
+46. [usnick@cs ~]$ cp Exception8.java /usr/tmp/PF2
+47. [usnick@cs ~]$ cp Exception8.java /usr/tmp/PF2vi Exception8.java
+
+        <snip!>  (text deleted from output)
+
+48. [usnick@cs ~]$ 
+48. [usnick@cs ~]$ javac Exception8.java
+49. [usnick@cs ~]$ java Exception8
+No problem!
+50. [usnick@cs ~]$ 
+50. [usnick@cs ~]$ vi PF2/exceptions/Exception3b.java
+
+        <snip!>  (text deleted from output)
+
+51. [usnick@cs ~]$ exit
+
+Script done on Thu 14 Jul 2016 12:45:30 PM CDT

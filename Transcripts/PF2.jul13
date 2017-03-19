@@ -1,0 +1,341 @@
+Script started on Wed 13 Jul 2016 11:47:51 AM CDT
+==============================================================================
+ The temperature in Amarillo is  83
+==============================================================================
+[usnick@cs ~]$ nums
+2. [usnick@cs ~]$ 
+2. [usnick@cs ~]$ 
+2. [usnick@cs ~]$ 
+2. [usnick@cs ~]$ vi Jul13.java
+
+        <snip!>  (text deleted from output)
+
+3. [usnick@cs ~]$ 
+3. [usnick@cs ~]$ cat Jul13.java
+public class Jul13
+{
+    public static void main(String args[])
+    {
+        int ar[][];
+
+        ar = new int[2][3];
+
+    }
+}
+4. [usnick@cs ~]$ javac Jul13.java
+5. [usnivi
+
+        <snip!>  (text deleted from output)
+
+6. [usnick@cs ~]$ cat Jul13.java
+public class Jul13
+{
+    public static void main(String args[])
+    {
+        int ar[][];
+
+        ar = new int[2][3];
+
+        ar[1][2] = 5;
+
+        int c=1;
+
+        for (int i=0; i<2; i++)
+        {
+            System.out.println("i = " + i);
+            for (int j=0; j<3; j++)
+            {
+                System.out.println("    j = " + j);
+                ar[i][j] = c;
+                c++;
+            }
+        }
+    }
+}
+7. [usnick@cs ~]$ javac Jul13.java
+8. [usnick@cs ~]$ java Jul13
+i = 0
+    j = 0
+    j = 1
+    j = 2
+i = 1
+    j = 0
+    j = 1
+    j = 2
+9. [usnick@cs ~]$ vi Jul13.java
+
+        <snip!>  (text deleted from output)
+
+10. [usnick@cs ~]$ 
+10. [usnick@cs ~]$ 
+10. [usnick@cs ~]$ cat Jul13.java
+public class Jul13
+{
+    public static void main(String args[])
+    {
+        int ar[][];
+
+        ar = new int[2][3];
+
+        ar[1][2] = 5;
+
+        int c=1;
+
+        for (int i=0; i<2; i++)
+        {
+            for (int j=0; j<3; j++)
+            {
+                ar[i][j] = c;
+                c++;
+            }
+        }
+
+        for (int i=0; i<2; i++)
+        {
+            for (int j=0; j<3; j++)
+            {
+                System.out.println("ar[" + i + "][" + j + "] = " + ar[i][j]);
+            }
+        }
+    }
+}
+11. [usnick@cs ~]$ javac Jul13.java
+12. [usnick@cs ~]$ java Jul13
+ar[0][0] = 1
+ar[0][1] = 2
+ar[0][2] = 3
+ar[1][0] = 4
+ar[1][1] = 5
+ar[1][2] = 6
+13. [usnivi
+13. [usnick@cs ~]$ 
+13. [usnick@cs ~]$ cp Jul13.java /usr/tmp/PF2
+14. [usnick@cs ~]$ 
+14. [usnick@cs ~]$ vi Jul13.java
+
+        <snip!>  (text deleted from output)
+
+15. [usnick@cs ~]$ cp Jul13.java /usr/tmp/PF2PPcat
+public class Jul13
+{
+    public static void main(String args[])
+    {
+        int ar[][];
+
+        ar = new int[2][3];
+
+        ar[1][2] = 5;
+
+        int c=1;
+
+System.out.println("ar.length = " + ar.length);
+
+        for (int i=0; i<2; i++)
+        {
+            for (int j=0; j<3; j++)
+            {
+                ar[i][j] = c;
+                c++;
+            }
+        }
+
+        for (int i=0; i<2; i++)
+        {
+            for (int j=0; j<3; j++)
+            {
+                System.out.println("ar[" + i + "][" + j + "] = " + ar[i][j]);
+            }
+        }
+    }
+}
+16. [usncp Jul13.java /usr/tmp/PF2Pjavac Jul13.javcp Jul13.java /usr/tmp/PF2Pjava Jul13
+ar.length = 2
+ar[0][0] = 1
+ar[0][1] = 2
+ar[0][2] = 3
+ar[1][0] = 4
+ar[1][1] = 5
+ar[1][2] = 6
+18. [usnivi
+
+        <snip!>  (text deleted from output)
+
+19. [usnick@cs ~]$ Pcat
+public class Jul13
+{
+    public static void main(String args[])
+    {
+        int ar[][];
+
+        ar = new int[2][3];
+
+        ar[1][2] = 5;
+
+        int c=1;
+
+
+        for (int i=0; i<ar.length; i++)
+        {
+            for (int j=0; j<ar[i].length; j++)
+            {
+                ar[i][j] = c;
+                c++;
+            }
+        }
+
+        for (int i=0; i<ar.length; i++)
+        {
+            for (int j=0; j<ar[i].length; j++)
+            {
+                System.out.println("ar[" + i + "][" + j + "] = " + ar[i][j]);
+            }
+        }
+    }
+}
+20. [usnjavac Jul13.javjava Jul13
+ar[0][0] = 1
+ar[0][1] = 2
+ar[0][2] = 3
+ar[1][0] = 4
+ar[1][1] = 5
+ar[1][2] = 6
+22. [usnick@cs ~]$ cp Jul13.java /usr/tmp/PF2
+23. [usnick@cs ~]$ cp Jul13.java Jul13b.java
+24. [usnick@cs ~]$ vi Jul13b.java
+
+        <snip!>  (text deleted from output)
+
+25. [usnick@cs ~]$ @cp/usr/tmp/PF2Pcat Jul13b.java
+public class Jul13b
+{
+    public static void main(String args[])
+    {
+        int ar[][] = { { 1, 2, 3 }, { 4, 5, 6 } };
+
+        for (int i=0; i<ar.length; i++)
+        {
+            for (int j=0; j<ar[i].length; j++)
+            {
+                System.out.println("ar[" + i + "][" + j + "] = " + ar[i][j]);
+            }
+        }
+    }
+}
+26. [usnick@cs ~]$ javac Jul13b.java
+27. [usnick@cs ~]$ java Jul13b
+ar[0][0] = 1
+ar[0][1] = 2
+ar[0][2] = 3
+ar[1][0] = 4
+ar[1][1] = 5
+ar[1][2] = 6
+28. [usnick@cs ~]$ 
+28. [usnick@cs ~]$ vi Jul13b.java
+
+        <snip!>  (text deleted from output)
+
+29. [usnick@cs ~]$ Pcat
+public class Jul13b
+{
+    public static void main(String args[])
+    {
+        int ar[][] = { { 1, 2, 3 }, { 4, 5 }, { 6, 7, 8, 9 } };
+
+        for (int i=0; i<ar.length; i++)
+        {
+            for (int j=0; j<ar[i].length; j++)
+            {
+                System.out.println("ar[" + i + "][" + j + "] = " + ar[i][j]);
+            }
+        }
+    }
+}
+30. [usjavac Jul13b.jjava Jul13b
+ar[0][0] = 1
+ar[0][1] = 2
+ar[0][2] = 3
+ar[1][0] = 4
+ar[1][1] = 5
+ar[2][0] = 6
+ar[2][1] = 7
+ar[2][2] = 8
+ar[2][3] = 9
+32. [usnick@cs ~]$ 
+32. [usnick@cs ~]$ cp Jul13b.java /usr/tmp/PF2
+33. [usnick@cs ~]$ cp Jul13b.java Jul13c.java
+34. [usnick@cs ~]$ 
+34. [usnick@cs ~]$ 
+34. [usnick@cs ~]$ vi Jul13c.java
+
+        <snip!>  (text deleted from output)
+
+35. [usncat Jul13c.java
+public class Jul13c
+{
+    public static void main(String args[])
+    {
+        int ar[][] = { { 1, 2, 3 }, { 4, 5 }, { 6, 7, 8, 9 } };
+
+        for (int i=0; i<ar.length; i++)
+        {
+            for (int j=0; j<ar[i].length; j++)
+            {
+                System.out.print(ar[i][j]);
+            }
+        }
+    }
+}
+36. [usnick@cs ~]$ javac Jul13c.java
+37. [usnick@cs ~]$ java Jul13c
+12345678938. [usnvi
+
+        <snip!>  (text deleted from output)
+
+39. [usnick@cs ~]$ Pcat
+public class Jul13c
+{
+    public static void main(String args[])
+    {
+        int ar[][] = { { 1, 2, 3 }, { 4, 5 }, { 6, 7, 8, 9 } };
+
+        for (int i=0; i<ar.length; i++)
+        {
+            for (int j=0; j<ar[i].length; j++)
+            {
+                System.out.print(ar[i][j] + " ");
+            }
+        }
+    }
+}
+40. [usjavac Jul13c.jjava Jul13c
+1 2 3 4 5 6 7 8 9 42. [usnvi
+
+        <snip!>  (text deleted from output)
+
+43. [usnick@cs ~]$ Pcat
+public class Jul13c
+{
+    public static void main(String args[])
+    {
+        int ar[][] = { { 1, 2, 3 }, { 4, 5 }, { 6, 7, 8, 9 } };
+
+        for (int i=0; i<ar.length; i++)
+        {
+            for (int j=0; j<ar[i].length; j++)
+            {
+                System.out.print(ar[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+44. [usjavac Jul13c.jjava Jul13c
+1 2 3 
+4 5 
+6 7 8 9 
+46. [usnick@cs ~]$ cp Jul13c.java /usr/tmp/PF2
+47. [usnick@cs ~]$ 
+47. [usnick@cs ~]$ 
+47. [usnick@cs ~]$ exit
+
+Script done on Wed 13 Jul 2016 12:17:12 PM CDT

@@ -1,0 +1,48 @@
+one last change to the subtract method:
+
+    how to call this copy method???
+
+    b1 = b2.copyMe();   // the winner!
+
+    b2.copyMe(b1);
+
+    copy(bidest, bisrc);
+
+
+    private BigInteger copyMe()
+    {
+        BigInteger biclone = new BigInteger();
+
+        for (int i=0; i<INTSIZ; i++)
+        {
+            biclone.intArray[i] = intArray[i];
+        }
+
+        return biclone;
+    }
+
+    ????  inside subtract???
+    bitmp = b1.copyMe();  not quite;  instead:  bitmp = copyMe();
+    ????
+
+======================================================
+
+how to shift a BigInteger???
+
+    shift(n);
+
+    bi.shift(n);
+
+    shift(bi, n);
+
+    private void shift(int n)
+    {
+        for (int j=0; j<n; j++)
+        {
+            for (int i=1; i<INTSIZ; i++)
+            {
+                intArray[i-1] = intArray[i];
+            }
+            intArray[INTSIZ-1] = 0;
+        }
+    }

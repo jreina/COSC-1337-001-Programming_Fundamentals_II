@@ -1,0 +1,158 @@
+Script started on Tue 07 Jun 2016 11:47:06 AM CDT
+==============================================================================
+ The temperature in Amarillo is  75
+==============================================================================
+[usnick@cs ~]$ nums
+2. [usnick@cs ~]$ 
+2. [usnick@cs ~]$ 
+2. [usnick@cs ~]$ bc
+bc 1.06.95
+Copyright 1991-1994, 1997, 1998, 2000, 2004, 2006 Free Software Foundation, Inc.
+This is free software with ABSOLUTELY NO WARRANTY.
+For details type `warranty'. 
+
+@2+3
+5
+
+(2+3)*6
+30
+
+2^64
+18446744073709551616
+
+
+2^32
+4294967296
+
+859485495849854958493850358043958309584398*859485938594358439584395823958435
+73871569810875015432377854824936209696713911703298268845384623961607\
+6497130
+
+3. [usnick@cs ~]$ 
+3. [usnick@cs ~]$ 
+3. [usnick@cs ~]$ cd PF2/*Big*
+4. [usnick@cs lab4-BigInteger]$ 
+4. [usnick@cs lab4-BigInteger]$ ls
+add	BigInteger.class  Lab4.class  Lab4.java  subtract
+assign	copyshift	  lab4data    multiply
+5. [usnick@cs lab4-BigInteger]$ java Lab4
+input the first BigInteger:
+enter the BigInteger: (do not pad with zeros): 12345
+input the second BigInteger:
+enter the BigInteger: (do not pad with zeros): 67
+BigInt #1:  0000000000000000000012345
+BigInt #2:  0000000000000000000000067
+            =========================
+SUM:        0000000000000000000012412
+
+BigInt #1:  0000000000000000000012345
+BigInt #2:  0000000000000000000000067
+            =========================
+DIFFERENCE: 0000000000000000000012278
+
+BigInt #1:  0000000000000000000012345
+BigInt #2:  0000000000000000000000067
+            =========================
+PRODUCT:    0000000000000000000827115
+
+6. [usnick@cs lab4-BigInteger]$ 
+6. [usnick@cs lab4-BigInteger]$ 
+6. [usnick@cs lab4-BigInteger]$ java Lab4
+input the first BigInteger:
+enter the BigInteger: (do not pad with zeros): 49584958495849584589458945845545
+Exception in thread "main" java.lang.ArithmeticException: OVERFLOW!
+	at BigInteger.inputBigInteger(Lab4.java:228)
+	at Lab4.main(Lab4.java:46)
+7. [usnick@cs lab4-BigInteger]$ 
+7. [usnick@cs lab4-BigInteger]$ 
+7. [usnick@cs lab4-BigInteger]$ cd
+8. [usnick@cs ~]$ 
+8. [usnick@cs ~]$ vi jun7.txt
+
+        <snip!>  (text deleted from output)
+
+9. [usnick@cs ~]$ 
+9. [usnick@cs ~]$ cat jun7.txt
+
+
+    public BigInteger add(BigInteger biref)
+    {
+        BigInteger bisum = new BigInteger();
+
+        for(int i=INTSIZ-1 i>=0; i--)
+        {
+            bisum.intArray[i] = intArray[i] + biref.intArray[i];
+        }
+    }
+10. [usnick@cs ~]$ vi
+
+        <snip!>  (text deleted from output)
+
+11. [usnick@cs ~]$ 
+11. [usnick@cs ~]$ cat jun7.txt
+
+
+    public BigInteger add(BigInteger biref)
+    {
+        BigInteger bisum = new BigInteger();
+
+        int carry = 0;
+
+        int tmp;
+
+        for(int i=INTSIZ-1 i>=0; i--)
+        {
+            tmp = intArray[i] + biref.intArray[i] + carry;
+
+            carry = tmp/10;
+            bisum.intArray[i] = tmp%10;
+        }
+    }
+12. [usnick@cs ~]$ 
+12. [usnick@cs ~]$ bc
+bc 1.06.95
+Copyright 1991-1994, 1997, 1998, 2000, 2004, 2006 Free Software Foundation, Inc.
+This is free software with ABSOLUTELY NO WARRANTY.
+For details type `warranty'. 
+9/10
+0
+13. [usnick@cs ~]$ vi
+
+        <snip!>  (text deleted from output)
+
+14. [usnick@cs ~]$ 
+14. [usnick@cs ~]$ 
+14. [usnick@cs ~]$ cat jun7.txt
+
+
+    public BigInteger add(BigInteger biref)
+    {
+        BigInteger bisum = new BigInteger();
+
+        int carry = 0;
+
+        int tmp;
+
+        for(int i=INTSIZ-1; i>=0; i--)
+        {
+            tmp = intArray[i] + biref.intArray[i] + carry;
+
+            carry = tmp/10;
+            bisum.intArray[i] = tmp%10;
+        }
+
+        return bisum;
+    }
+15. [usnick@cs ~]$ 
+15. [usnick@cs ~]$ cp jun7.txt /usr/tmp/PF2
+16. [usnick@cs ~]$ 
+16. [usnick@cs ~]$ cd public_html/PF2/lab4
+17. [usnick@cs lab4]$ ls
+index.html  multiply.html  subtract.html
+18. [usnick@cs lab4]$ 
+18. [usnick@cs lab4]$ 
+18. [usnick@cs lab4]$ # http://cs.actx.edu/~usnick/PF2/lab4/subtract.html
+18. [usnick@cs lab4]$ 
+18. [usnick@cs lab4]$ exit
+
+Script done on Tue 07 Jun 2016 01:07:24 PM CDT

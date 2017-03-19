@@ -1,0 +1,111 @@
+For the string "hello world":
+
+TOP OF LOOP
+s=[he]
+TOP OF LOOP
+s=[el]
+TOP OF LOOP
+s=[ll]
+TOP OF LOOP
+s=[lo]
+TOP OF LOOP
+s=[o ]
+TOP OF LOOP
+s=[ w]
+TOP OF LOOP
+s=[wo]
+TOP OF LOOP
+s=[or]
+TOP OF LOOP
+s=[rl]
+TOP OF LOOP
+s=[ld]
+
+
+Then break that 2 character long string into two 1 character long strings:
+
+TOP OF LOOP
+c1 = h
+c2 = e
+TOP OF LOOP
+c1 = e
+c2 = l
+TOP OF LOOP
+c1 = l
+c2 = l
+TOP OF LOOP
+c1 = l
+c2 = o
+TOP OF LOOP
+c1 = o
+c2 = 
+TOP OF LOOP
+c1 = 
+c2 = w
+TOP OF LOOP
+c1 = w
+c2 = o
+TOP OF LOOP
+c1 = o
+c2 = r
+TOP OF LOOP
+c1 = r
+c2 = l
+TOP OF LOOP
+c1 = l 
+c2 = d
+
+
+Then, after this is working 100%, you add code to determine if c1 and c2 are delims and print that out so your output will look like this:
+
+TOP OF LOOP
+c1 = h
+is NOT a delim
+c2 = e
+is NOT a delim
+TOP OF LOOP
+c1 = e
+is NOT a delim
+c2 = l
+is NOT a delim
+TOP OF LOOP
+c1 = l
+is NOT a delim
+c2 = l
+is NOT a delim
+TOP OF LOOP
+c1 = l
+is NOT a delim
+c2 = o
+is NOT a delim
+TOP OF LOOP
+c1 = o
+is NOT a delim
+c2 = 
+IS a delim
+TOP OF LOOP
+c1 = 
+IS a delim
+c2 = w
+is NOT a delim
+TOP OF LOOP
+c1 = w
+is NOT a delim
+c2 = o
+is NOT a delim
+TOP OF LOOP
+c1 = o
+is NOT a delim
+c2 = r
+is NOT a delim
+TOP OF LOOP
+c1 = r
+is NOT a delim
+c2 = l
+is NOT a delim
+TOP OF LOOP
+c1 = l 
+is NOT a delim
+c2 = d
+is NOT a delim
+

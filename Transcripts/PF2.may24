@@ -1,0 +1,945 @@
+Script started on Tue 24 May 2016 11:44:56 AM CDT
+==============================================================================
+ The temperature in Amarillo is  74
+==============================================================================
+[usnick@cs ~]$ # 7663
+[usnick@cs ~]$ 
+[usnick@cs ~]$ 
+[usnick@cs ~]$ cp PF2/*primes/Main0.java May24.java
+cp: cannot stat `PF2/*primes/Main0.java': No such file or direls PF2/*primes
+ans		files		Main0a.java  Main1.java   Main3.java
+assign.lab1	Lab1hint.java	Main0b.java  Main2.class  Main4b.java
+assign.lab2	Lab2hint2.java	Main1a.java  Main2.java   Main4.java
+assign.lab2alt	Lab2hint.java	Main1.class  Main3.class  runem.sh
+[usnick@cs ~]$ cp PF2/*primes/Main0a.java May24.java
+[usnick@cs ~]$ vi May24.java
+
+        <snip!>  (text deleted from output)
+
+[usnick@cs ~]$ cp May24.java /usr/tmp
+[usnick@cs ~]$ ls /usr/tmp/PF2
+[usnick@cs ~]$ cp May24.java /usr/tmp/PF2
+[usnick@cs ~]$ vi May24.java
+
+        <snip!>  (text deleted from output)
+
+[usnick@cs ~]$ 
+[usnick@cs ~]$ 
+[usnick@cs ~]$ nums
+9. [usnick@cs ~]$ 
+9. [usnick@cs ~]$ cat May24.java
+import java.io.*;
+
+public class May24
+{
+
+    public static boolean isPrime(int n)
+    {
+        for (int i=2; i<n; i++) {
+            if ((n%i) == 0) {
+                System.out.println(n + " is divisible by " + i);
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String args[]) throws IOException
+    {
+        String str;
+
+        BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+        while (true) {
+            System.out.println("enter a whole number or \"quit\":");
+            str = input.readLine();
+
+            if (str.equals("quit")) break;
+
+            if (isPrime(Integer.parseInt(str))) {
+                System.out.println("IS PRIME");
+            } else {
+                System.out.println("is NOT prime");
+            }
+        }
+    }
+}
+10. [usnick@cs ~]$ javac May24.java
+11. [usnick@cs ~]$ java May24
+enter a whole number or "quit":
+6773
+6773 is divisible by 13
+is NOT prime
+enter a whole number or "quit":
+7663
+7663 is divisible by 79
+is NOT prime
+enter a whole number or "quit":
+^C12. [usnick@cs ~]$ 
+12. [usnick@cs ~]$ bc
+bc 1.06.95
+Copyright 1991-1994, 1997, 1998, 2000, 2004, 2006 Free Software Foundation, Inc.
+This is free software with ABSOLUTELY NO WARRANTY.
+For details type `warranty'. 
+7663/79
+97
+13. [usnick@cs ~]$ 
+13. [usnick@cs ~]$ 
+13. [usnick@cs ~]$ 
+13. [usnick@cs ~]$ date
+Tue May 24 12:07:45 CDT 2016
+14. [usnick@cs ~]$ time java May24
+enter a whole number or "quit":
+7663
+7663 is divisible by 79
+is NOT prime
+enter a whole number or "quit":
+quit
+
+real	0m5.067s
+user	0m0.043s
+sys	0m0.010s
+15. [usnick@cs ~]$ 
+15. [usnick@cs ~]$ cp PF2/*primes/Main1.java May24b.java
+16. [usnick@cs ~]$ vi May24b.java
+
+        <snip!>  (text deleted from output)
+
+17. [usnick@cs ~]$ cp May24b.java /usr/tmp/PF2
+18. [usnick@cs ~]$ vi May24b.java
+
+        <snip!>  (text deleted from output)
+
+19. [usnick@cs ~]$ 
+19. [usnick@cs ~]$ 
+19. [usnick@cs ~]$ ps
+  PID TTY          TIME CMD
+ 2262 pts/15   00:00:00 ps
+31616 pts/15   00:00:00 bash
+20. [usnick@cs ~]$ 
+20. [usnick@cs ~]$ cat May24b.java
+// find all primes < 1M using BRUTE FORCE, checking
+// ALL whole numbers less than square root as possible
+// factors of 'n'
+
+public class May24b
+{
+
+    public static boolean isPrime(int n)
+    {
+        for (int i=2; i<n; i++) {
+            if ((n%i) == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String args[])
+    {
+        int c=0;
+        long start, end, mstime;
+
+        final int LIMIT=100000;  // 1M took ~800 secs.
+
+        start = System.currentTimeMillis();
+
+        for (int i=2; i<LIMIT; i++) {
+
+            if (isPrime(i)) {
+                System.out.println(i);
+                c++;
+            }
+        }
+
+        end = System.currentTimeMillis();
+
+        mstime = end - start;
+
+        System.out.println("#primes = " + c + ", mstime = " + mstime);
+    }
+}
+21. [usnick@cs ~]$ javac May24b.java
+22. [usnick@cs ~]$ top
+
+        <snip!>  (text deleted from output)
+
+23. [usnick@cs ~]$ 
+23. [usnick@cs ~]$ 
+23. [usnick@cs ~]$ 
+23. [usnick@cs ~]$ 
+23. [usnick@cs ~]$ java May24b
+2
+3
+5
+7
+11
+13
+17
+19
+23
+29
+31
+37
+
+<snip>
+
+96827
+96847
+96851
+96857
+96893
+96907
+96911
+96931
+96953
+96959
+96973
+96979
+96989
+96997
+97001
+97003
+97007
+97021
+97039
+97073
+97081
+97103
+97117
+97127
+97151
+97157
+97159
+97169
+97171
+97177
+97187
+97213
+97231
+97241
+97259
+97283
+97301
+97303
+97327
+97367
+97369
+97373
+97379
+97381
+97387
+97397
+97423
+97429
+97441
+97453
+97459
+97463
+97499
+97501
+97511
+97523
+97547
+97549
+97553
+97561
+97571
+97577
+97579
+97583
+97607
+97609
+97613
+97649
+97651
+97673
+97687
+97711
+97729
+97771
+97777
+97787
+97789
+97813
+97829
+97841
+97843
+97847
+97849
+97859
+97861
+97871
+97879
+97883
+97919
+97927
+97931
+97943
+97961
+97967
+97973
+97987
+98009
+98011
+98017
+98041
+98047
+98057
+98081
+98101
+98123
+98129
+98143
+98179
+98207
+98213
+98221
+98227
+98251
+98257
+98269
+98297
+98299
+98317
+98321
+98323
+98327
+98347
+98369
+98377
+98387
+98389
+98407
+98411
+98419
+98429
+98443
+98453
+98459
+98467
+98473
+98479
+98491
+98507
+98519
+98533
+98543
+98561
+98563
+98573
+98597
+98621
+98627
+98639
+98641
+98663
+98669
+98689
+98711
+98713
+98717
+98729
+98731
+98737
+98773
+98779
+98801
+98807
+98809
+98837
+98849
+98867
+98869
+98873
+98887
+98893
+98897
+98899
+98909
+98911
+98927
+98929
+98939
+98947
+98953
+98963
+98981
+98993
+98999
+99013
+99017
+99023
+99041
+99053
+99079
+99083
+99089
+99103
+99109
+99119
+99131
+99133
+99137
+99139
+99149
+99173
+99181
+99191
+99223
+99233
+99241
+99251
+99257
+99259
+99277
+99289
+99317
+99347
+99349
+99367
+99371
+99377
+99391
+99397
+99401
+99409
+99431
+99439
+99469
+99487
+99497
+99523
+99527
+99529
+99551
+99559
+99563
+99571
+99577
+99581
+99607
+99611
+99623
+99643
+99661
+99667
+99679
+99689
+99707
+99709
+99713
+99719
+99721
+99733
+99761
+99767
+99787
+99793
+99809
+99817
+99823
+99829
+99833
+99839
+99859
+99871
+99877
+99881
+99901
+99907
+99923
+99929
+99961
+99971
+99989
+99991
+#primes = 9592, mstime = 1513
+24. [usnick@cs ~]$ 
+24. [usnick@cs ~]$ 
+24. [usnick@cs ~]$ java May24b | tail
+99881
+99901
+99907
+99923
+99929
+99961
+99971
+99989
+99991
+#primes = 9592, mstime = 1505
+25. [usnick@cs ~]$ 
+25. [usnick@cs ~]$ 
+25. [usnick@cs ~]$ vi May24b.java
+
+        <snip!>  (text deleted from output)
+
+26. [usnick@cs ~]$ 
+26. [usnick@cs ~]$ 
+26. [usnick@cs ~]$ cat May24b.java
+// find all primes < 1M using BRUTE FORCE, checking
+// ALL whole numbers less than square root as possible
+// factors of 'n'
+
+public class May24b
+{
+
+    public static boolean isPrime(int n)
+    {
+        for (int i=2; i<(n/2); i++) {
+            if ((n%i) == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String args[])
+    {
+        int c=0;
+        long start, end, mstime;
+
+        final int LIMIT=100000;  // 1M took ~800 secs.
+
+        start = System.currentTimeMillis();
+
+        for (int i=2; i<LIMIT; i++) {
+
+            if (isPrime(i)) {
+                System.out.println(i);
+                c++;
+            }
+        }
+
+        end = System.currentTimeMillis();
+
+        mstime = end - start;
+
+        System.out.println("#primes = " + c + ", mstime = " + mstime);
+    }
+}
+27. [usnick@cs ~]$ javac May24b.java
+28. [usnick@cs ~]$ java May24b | tail
+99881
+99901
+99907
+99923
+99929
+99961
+99971
+99989
+99991
+#primes = 9593, mstime = 818
+29. [usnick@cs ~]$ java May24b | tail
+99881
+99901
+99907
+99923
+99929
+99961
+99971
+99989
+99991
+#primes = 9593, mstime = 820
+30. [usnick@cs ~]$ java May24b | tail
+99881
+99901
+99907
+99923
+99929
+99961
+99971
+99989
+99991
+#primes = 9593, mstime = 818
+31. [usnick@cs ~]$ java May24b | tail
+99881
+99901
+99907
+99923
+99929
+99961
+99971
+99989
+99991
+#primes = 9593, mstime = 819
+32. [usnvi
+
+        <snip!>  (text deleted from outpucat
+// find all primes < 1M using BRUTE FORCE, checking
+// ALL whole numbers less than square root as possible
+// factors of 'n'
+
+public class May24b
+{
+
+    public static boolean isPrime(int n)
+    {
+        int limit = n/2;
+        for (int i=2; i<limit; i++) {
+            if ((n%i) == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String args[])
+    {
+        int c=0;
+        long start, end, mstime;
+
+        final int LIMIT=100000;  // 1M took ~800 secs.
+
+        start = System.currentTimeMillis();
+
+        for (int i=2; i<LIMIT; i++) {
+
+            if (isPrime(i)) {
+                System.out.println(i);
+                c++;
+            }
+        }
+
+        end = System.currentTimeMillis();
+
+        mstime = end - start;
+
+        System.out.println("#primes = " + c + ", mstime = " + mstime);
+    }
+}
+34. [usjavac May24b.java
+35. [usnick@cs ~]$ 
+35. [usnick@cs ~]$ 
+35. [usnick@cs ~]$ vi May24b.java
+
+        <snip!>  (text deletejava May24b | tail
+99881
+99901
+99907
+99923
+99929
+99961
+99971
+99989
+99991
+#primes = 9593, mstime = 817
+37. [usnick@cs ~]$ java May24b | tail
+99881
+99901
+99907
+99923
+99929
+99961
+99971
+99989
+99991
+#primes = 9593, mstime = 831
+38. [usnick@cs ~]$ java May24b | tail
+99881
+99901
+99907
+99923
+99929
+99961
+99971
+99989
+99991
+#primes = 9593, mstime = 817
+39. [usnick@cs ~]$ java May24b | tail
+99881
+99901
+99907
+99923
+99929
+99961
+99971
+99989
+99991
+#primes = 9593, mstime = 819
+40. [usnick@cs ~]$ java May24b | tail
+99881
+99901
+99907
+99923
+99929
+99961
+99971
+99989
+99991
+#primes = 9593, mstime = 818
+41. [usnick@cs ~]$ 
+41. [usnick@cs ~]$ vi May24b.java
+
+        <snip!>  (text deleted from output)
+
+42. [usnick@cs ~]$ ls -l May24b*
+-rw-rw-r--. 1 usnick usnick 1042 May 24 12:31 May24b.class
+-rw-rw-r--. 1 usnick usnick  879 May 24 12:31 May24b.java
+43. [usnick@cs ~]$ javac May24c.java
+May24c.java:5: class May24b is public, should be declared in a file named May24b.java
+public class May24b
+       ^
+1 error
+44. [usnick@cs ~]$ vi May24b.java
+44. [usnick@cs ~]$ vi May24c.java
+
+        <snip!>  (text deleted from output)
+
+45. [usnick@cs ~]$ javac
+45. [usnick@cs ~]$ cat May24c.java
+// find all primes < 1M using BRUTE FORCE, checking
+// ALL whole numbers less than square root as possible
+// factors of 'n'
+
+public class May24c
+{
+
+    public static boolean isPrime(int n)
+    {
+        int limit = (int) Math.sqrt(n);
+ 
+        for (int i=2; i<=limit; i++) {
+            if ((n%i) == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String args[])
+    {
+        int c=0;
+        long start, end, mstime;
+
+        final int LIMIT=100000;  // 1M took ~800 secs.
+
+        start = System.currentTimeMillis();
+
+        for (int i=2; i<LIMIT; i++) {
+
+            if (isPrime(i)) {
+                System.out.println(i);
+                c++;
+            }
+        }
+
+        end = System.currentTimeMillis();
+
+        mstime = end - start;
+
+        System.out.println("#primes = " + c + ", mstime = " + mstime);
+    }
+}
+46. [usnick@cs ~]$ javac May24c.java
+47. [usnick@cs ~]$ java May24c | tail
+99881
+99901
+99907
+99923
+99929
+99961
+99971
+99989
+99991
+#primes = 9592, mstime = 168
+48. [usnick@cs ~]$ java May24c | tail
+99881
+99901
+99907
+99923
+99929
+99961
+99971
+99989
+99991
+#primes = 9592, mstime = 176
+49. [usnick@cs ~]$ java May24c | tail
+99881
+99901
+99907
+99923
+99929
+99961
+99971
+99989
+99991
+#primes = 9592, mstime = 311
+50. [usnick@cs ~]$ java May24c | tail
+99881
+99901
+99907
+99923
+99929
+99961
+99971
+99989
+99991
+#primes = 9592, mstime = 169
+51. [usnick@cs ~]$ vi May24b.java
+
+        <snip!>  (text deleted from output)
+
+52. [usnick@cs ~]$ cat May24b.java
+// find all primes < 1M using BRUTE FORCE, checking
+// ALL whole numbers less than square root as possible
+// factors of 'n'
+
+public class May24b
+{
+
+    public static boolean isPrime(int n)
+    {
+        int limit = n/2;
+        for (int i=2; i<limit; i++) {
+            if ((n%i) == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String args[])
+    {
+        int c=0;
+        long start, end, mstime;
+
+        final int LIMIT=1000000;  // 1M took ~800 secs.
+
+        start = System.currentTimeMillis();
+
+        for (int i=2; i<LIMIT; i++) {
+
+            if (isPrime(i)) {
+                System.out.println(i);
+                c++;
+            }
+        }
+
+        end = System.currentTimeMillis();
+
+        mstime = end - start;
+
+        System.out.println("#primes = " + c + ", mstime = " + mstime);
+    }
+}
+53. [usnick@cs ~]$ javac May24b.java
+54. [usnick@cs ~]$ 
+54. [usnick@cs ~]$ java May24b | tail
+^C
+55. [usnick@cs ~]$ vi May24c.java
+
+        <snip!>  (text deleted from output)
+
+56. [usnick@cs ~]$ cat May24c.java
+// find all primes < 1M using BRUTE FORCE, checking
+// ALL whole numbers less than square root as possible
+// factors of 'n'
+
+public class May24c
+{
+
+    public static boolean isPrime(int n)
+    {
+        int limit = (int) Math.sqrt(n);
+ 
+        for (int i=2; i<=limit; i++) {
+            if ((n%i) == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String args[])
+    {
+        int c=0;
+        long start, end, mstime;
+
+        final int LIMIT=1000000;  // 1M took ~800 secs.
+
+        start = System.currentTimeMillis();
+
+        for (int i=2; i<LIMIT; i++) {
+
+            if (isPrime(i)) {
+                System.out.println(i);
+                c++;
+            }
+        }
+
+        end = System.currentTimeMillis();
+
+        mstime = end - start;
+
+        System.out.println("#primes = " + c + ", mstime = " + mstime);
+    }
+}
+57. [usnick@cs ~]$ java May24c | tail
+99881
+99901
+99907
+99923
+99929
+99961
+99971
+99989
+99991
+#primes = 9592, mstime = 173
+58. [usnick@cs ~]$ java May24c | tail
+99881
+99901
+99907
+99923
+99929
+99961
+99971
+99989
+99991
+#primes = 9592, mstime = 175
+59. [usnick@cs ~]$ java May24c | tail
+59. [usnick@cs ~]$ vi May24c.java
+
+        <snip!>  (text deleted from output)
+
+60. [usnick@cs ~]$ ls -l May24c*
+-rw-rw-r--. 1 usnick usnick 1089 May 24 12:45 May24c.class
+-rw-rw-r--. 1 usnick usnick  898 May 24 12:47 May24c.java
+61. [usnick@cs ~]$ javac May24c.java
+62. [usnick@cs ~]$ java May24c | tail
+999883
+999907
+999917
+999931
+999953
+999959
+999961
+999979
+999983
+#primes = 78498, mstime = 626
+63. [usnick@cs ~]$ java May24c | tail
+999883
+999907
+999917
+999931
+999953
+999959
+999961
+999979
+999983
+#primes = 78498, mstime = 629
+64. [usnick@cs ~]$ vi May24c.java
+
+        <snip!>  (text deleted from output)
+
+65. [usnick@cs ~]$ vi May24c.java
+
+        <snip!>  (text deleted from output)
+
+66. [usnick@cs ~]$ cd
+67. [usnick@cs ~]$ cd public_html/PF2
+68. [usnick@cs PF2]$ chmod 711 lab1
+69. [usnick@cs PF2]$ cd
+70. [usnick@cs ~]$ cp May24*.java /usr/tmp/PF2
+71. [usnick@cs ~]$ exit
+
+Script done on Tue 24 May 2016 01:28:38 PM CDT

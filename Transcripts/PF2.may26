@@ -1,0 +1,48 @@
+Script started on Thu 26 May 2016 12:23:37 PM CDT
+==============================================================================
+ The temperature in Amarillo is  80
+==============================================================================
+[usnick@cs ~]$ vi May26.java
+
+        <snip!>  (text deleted from output)
+
+[usnick@cs ~]$ 
+[usnick@cs ~]$ java May26 | more
+
+        <snip!>  (text deleted from output)
+
+[usnick@cs ~]$ 
+[usnick@cs ~]$ cp May26.java /usr/tmp/PF2
+[usnick@cs ~]$ 
+[usnick@cs ~]$ vi May26.java
+
+        <snip!>  (text deleted from output)
+
+[usnick@cs ~]$ 
+[usnick@cs ~]$ cd 
+[usnick@cs ~]$ cd public_html/
+[usnick@cs public_html]$ cd lab2
+bash: cd: lab2: No such file or directory
+[usnick@cs public_html]$ ls
+adm	       images	      ORC	       sign.jpg      unixlinks
+apolicy.html   index.html     orders	       spock.html    van
+ARN	       JavaGames      PC	       style.css     VBdev
+asm	       left.html      PCSO	       TC	     versys
+banner.html    links.html     PDAweb	       top	     vi.html
+cgi-bin        lpolicy.html   PF1	       tpolicy.bak   vi_lab.bak
+clap.mp3       main.html      PF2	       tpolicy.html  vi_lab.html
+connect.html   math1414       PF3	       trailer	     XT
+frameset.html  misc	      PTL2	       transfer
+gpw	       mobile	      Rainbow.jpg      t.sh
+home	       nerdwatch      sadTrombone.mp3  unix
+hpolicy.html   nerdyfun.html  schedule	       unix2
+[usnick@cs public_html]$ cd PF2
+[usnick@cs PF2]$ cd lab2
+[usnick@cs lab2]$ vi *
+
+        <snip!>  (text deleted from output)
+
+[usnick@cs lab2]$ chmod 711 .
+[usnick@cs lab2]$ exit
+
+Script done on Thu 26 May 2016 12:53:54 PM CDT

@@ -1,0 +1,358 @@
+Script started on Wed 06 Jul 2016 11:40:40 AM CDT
+==============================================================================
+ The temperature in Amarillo is  89
+==============================================================================
+[usnick@cs ~]$ nums
+2. [usnick@cs ~]$ cd PF2/lab7-VPC/
+3. [usnick@cs lab7-VPC]$ ls
+addTwoNums.exe		   averageNums.src	  files       pad
+addTwoNumsInteractive.src  badOpCode.exe	  hosts       runprog.obfuscate
+addTwoNums.src		   badOpcode.src	  ifElse.exe  S13test2
+arithExpr.src		   badOperand.src	  ifElse.src  testQ.src
+Assemble.class		   countDown.exe	  if.exe      test.src
+Assemble.java		   countDown.src	  if.src      VPCrte.class
+Assemble.java.bak	   countUp.exe		  IO.class    VPCrte.java
+Assemble.pseudo		   countUp.src		  IO.java     VPCrte.java.bak
+assign			   divideInteractive.src  o	      VPCrte.pseudo
+averageNums.exe		   dump			  ops
+4. [usnick@cs lab7-VPC]$ 
+4. [usnick@cs lab7-VPC]$ more runprog.obfuscate 
+
+        <snip!>  (text deleted from output)
+
+5. [usnick@cs lab7-VPC]$ 
+5. [usnick@cs lab7-VPC]$ 
+5. [usnick@cs lab7-VPC]$ vi jul6.src
+
+        <snip!>  (text deleted from output)
+
+6. [usnick@cs lab7-VPC]$ cat jul6.src
+#########################################################################
+# HALT  = 0;  stop program
+# ADD   = 1;  GPREG is updated with itself + MEMORY[arg]
+# SUB   = 2;  GPREG is updated with itself - MEMORY[arg]
+# MLT   = 3;  GPREG is updated with itself * MEMORY[arg]
+# DIV   = 4;  GPREG is updated with itself / MEMORY[arg]
+# ILOAD = 5;  arg to GPREG
+# LOAD  = 6;  MEMORY[arg] to GPREG
+# STOR  = 7;  GPREG to MEMORY[arg]
+# READ  = 8;  keyboard to MEMORY[arg]
+# WRITE = 9;  MEMORY[arg] to screen
+# BR    = 10; unconditional branch to instruction at MEMORY[arg]
+# BZ    = 11; branch if GPREG is zero
+# BN    = 12; branch if GPREG is nonzero
+# DUMP  = 13; dump memory/register contents
+#########################################################################
+
+# for (i=5; i>0; i--) println(i)
+
+# memory map:
+#   81: store a '1' for decrement
+#   90: looping variable
+
+ILOAD  1
+STOR   81
+
+ILOAD  5
+STOR   90
+
+WRITE  90
+
+SUB    81
+
+BN     3
+
+HALT   99
+
+
+7. [usnick@cs lab7-VPC]$ 
+7. [usnick@cs lab7-VPC]$ 
+7. [usnick@cs lab7-VPC]$ java Assemble jul6.src
+0501
+0781
+0505
+0790
+0990
+0281
+1203
+0099
+8. [usnick@cs lab7-VPC]$ java Assemble jul6.src > jul6.exe
+9. [usnick@cs lab7-VPC]$ 
+9. [usnick@cs lab7-VPC]$ java VPCrte jul6.exe
+[90] -> 5
+[90] -> 4
+[90] -> 3
+[90] -> 2
+[90] -> 1
+10. [usnick@cs lab7-VPC]$ cp jul6.src /usr/tmp/PF2
+11. [usnick@cs lab7-VPC]$ cp jul6.src jul6b.src
+12. [usnick@cs lab7-VPC]$ vi jul6b.src
+
+        <snip!>  (text deleted from output)
+
+13. [usnick@cs lab7-VPC]$ 
+13. [usnick@cs lab7-VPC]$ 
+13. [usnick@cs lab7-VPC]$ cat jul6b.src
+#########################################################################
+# HALT  = 0;  stop program
+# ADD   = 1;  GPREG is updated with itself + MEMORY[arg]
+# SUB   = 2;  GPREG is updated with itself - MEMORY[arg]
+# MLT   = 3;  GPREG is updated with itself * MEMORY[arg]
+# DIV   = 4;  GPREG is updated with itself / MEMORY[arg]
+# ILOAD = 5;  arg to GPREG
+# LOAD  = 6;  MEMORY[arg] to GPREG
+# STOR  = 7;  GPREG to MEMORY[arg]
+# READ  = 8;  keyboard to MEMORY[arg]
+# WRITE = 9;  MEMORY[arg] to screen
+# BR    = 10; unconditional branch to instruction at MEMORY[arg]
+# BZ    = 11; branch if GPREG is zero
+# BN    = 12; branch if GPREG is nonzero
+# DUMP  = 13; dump memory/register contents
+#########################################################################
+
+# for (i=0; i<5; i++) println(i)
+
+# memory map:
+#   81: store a '1' for decrement
+#   85: upper limit
+#   90: looping variable
+
+ILOAD  1
+STOR   81
+
+ILOAD  5
+STOR   85
+
+ILOAD  0
+STOR   90
+
+WRITE  90
+
+LOAD   90  \
+ADD    81   90++
+STOR   90  /
+
+LOAD   85  \
+SUB    90   if (85 - 90 != 0) branch to WRITE 90
+BN     6   /
+
+HALT   99
+14. [usnick@cs lab7-VPC]$ java Assemble jul6b.src
+0501
+0781
+0505
+0785
+0500
+0790
+0990
+0690
+0181
+0790
+0685
+0290
+1206
+0099
+15. [usnick@cs lab7-VPC]$ java Assemble jul6b.src > jul6b.exe
+16. [usnick@cs lab7-VPC]$ 
+16. [usnick@cs lab7-VPC]$ java VPCrte jul6b.exe
+[90] -> 0
+[90] -> 1
+[90] -> 2
+[90] -> 3
+[90] -> 4
+17. [usnick@cs lab7-VPC]$ java VPCrte jul6b.exe debug | more
+
+        <snip!>  (text deleted from output)
+
+18. [usnick@cs lab7-VPC]$ 
+18. [usnick@cs lab7-VPC]$ 
+18. [usnick@cs lab7-VPC]$ java VPCrte jul6b.exe
+[90] -> 0
+[90] -> 1
+[90] -> 2
+[90] -> 3
+[90] -> 4
+19. [usnick@cs lab7-VPC]$ vi jul6b.src
+
+        <snip!>  (text deleted from output)
+
+20. [usnick@cs lab7-VPC]$ 
+20. [usnick@cs lab7-VPC]$ java Assemble jul6b.src
+0501
+0781
+0505
+0785
+0500
+0790
+0990
+0690
+0181
+0790
+1399
+0685
+0290
+1206
+0099
+21. [usnick@cs lab7-VPC]$ java Assemble jul6b.src > jul6b.exe
+22. [usnick@cs lab7-VPC]$ 
+22. [usnick@cs lajava VPCrte jul6b.exe | more
+
+        <snip!>  (text deleted from output)
+
+23. [usnick@cs lab7-VPC]$ 
+23. [usnick@cs lab7-VPC]$ 
+23. [usnick@cs lab7-VPC]$ 
+23. [usnick@cs lab7-VPC]$ 
+23. [usnick@cs lab7-VPC]$ vi jul6b.src
+
+        <snip!>  (text deleted from output)
+
+24. [usnick@cscat
+#########################################################################
+# HALT  = 0;  stop program
+# ADD   = 1;  GPREG is updated with itself + MEMORY[arg]
+# SUB   = 2;  GPREG is updated with itself - MEMORY[arg]
+# MLT   = 3;  GPREG is updated with itself * MEMORY[arg]
+# DIV   = 4;  GPREG is updated with itself / MEMORY[arg]
+# ILOAD = 5;  arg to GPREG
+# LOAD  = 6;  MEMORY[arg] to GPREG
+# STOR  = 7;  GPREG to MEMORY[arg]
+# READ  = 8;  keyboard to MEMORY[arg]
+# WRITE = 9;  MEMORY[arg] to screen
+# BR    = 10; unconditional branch to instruction at MEMORY[arg]
+# BZ    = 11; branch if GPREG is zero
+# BN    = 12; branch if GPREG is nonzero
+# DUMP  = 13; dump memory/register contents
+#########################################################################
+
+# for (i=0; i<5; i++) println(i)
+
+# memory map:
+#   81: store a '1' for decrement
+#   85: upper limit
+#   90: looping variable
+
+ILOAD  1
+STOR   81
+
+ILOAD  5
+STOR   85
+
+ILOAD  0
+STOR   90
+
+WRITE  90
+
+LOAD   90  \
+ADD    81   90++
+STOR   90  /
+
+#DUMP   99
+
+LOAD   85  \
+SUB    90   if (85 - 90 != 0) branch to WRITE 90
+BN     6   /
+
+HALT   99
+25. [usnick@cs ljava Assemble jul6b.src
+0501
+0781
+0505
+0785
+0500
+0790
+0990
+0690
+0181
+0790
+0685
+0290
+1206
+0java Assemble > jul6b.exe
+27. [usnick@cs lab7-VPC]$ 
+27. [usnick@cs lab7-VPC]$ 
+27. [usnick@cs lab7-VPC]$ java VPCrte jul6b.exe debug
+readToMemory: [00] = (0501)
+readToMemory: [01] = (0781)
+readToMemory: [02] = (0505)
+readToMemory: [03] = (0785)
+readToMemory: [04] = (0500)
+readToMemory: [05] = (0790)
+readToMemory: [06] = (0990)
+readToMemory: [07] = (0690)
+readToMemory: [08] = (0181)
+readToMemory: [09] = (0790)
+readToMemory: [10] = (0685)
+readToMemory: [11] = (0290)
+readToMemory: [12] = (1206)
+readToMemory: [13] = (0099)
+===================================================================
+PCREG = 0000
+IRREG = 0000
+GPREG = 0000
+
+MEMORY:     0     1     2     3     4     5     6     7     8     9
+    ---------------------------------------------------------------
+     0|  0501  0781  0505  0785  0500  0790  0990  0690  0181  0790
+     1|  0685  0290  1206  0099  0000  0000  0000  0000  0000  0000
+     2|  0000  0000  0000  0000  0000  0000  0000  0000  0000  0000
+     3|  0000  0000  0000  0000  0000  0000  0000  0000  0000  0000
+     4|  0000  0000  0000  0000  0000  0000  0000  0000  0000  0000
+     5|  0000  0000  0000  0000  0000  0000  0000  0000  0000  0000
+     6|  0000  0000  0000  0000  0000  0000  0000  0000  0000  0000
+     7|  0000  0000  0000  0000  0000  0000  0000  0000  0000  0000
+     8|  0000  0000  0000  0000  0000  0000  0000  0000  0000  0000
+     9|  0000  0000  0000  0000  0000  0000  0000  0000  0000  0000
+
+===================================================================
+runProg:  MEMORY[00] = 0501, opcode = 05, operand = 01, GPREG = 0000 (ILOAD)
+runProg:  MEMORY[01] = 0781, opcode = 07, operand = 81, GPREG = 0001 (STOR)
+runProg:  MEMORY[02] = 0505, opcode = 05, operand = 05, GPREG = 0001 (ILOAD)
+runProg:  MEMORY[03] = 0785, opcode = 07, operand = 85, GPREG = 0005 (STOR)
+runProg:  MEMORY[04] = 0500, opcode = 05, operand = 00, GPREG = 0005 (ILOAD)
+runProg:  MEMORY[05] = 0790, opcode = 07, operand = 90, GPREG = 0000 (STOR)
+runProg:  MEMORY[06] = 0990, opcode = 09, operand = 90, GPREG = 0000 (WRITE)
+[90] -> 0
+runProg:  MEMORY[07] = 0690, opcode = 06, operand = 90, GPREG = 0000 (LOAD)
+runProg:  MEMORY[08] = 0181, opcode = 01, operand = 81, GPREG = 0000 (ADD)
+runProg:  MEMORY[09] = 0790, opcode = 07, operand = 90, GPREG = 0001 (STOR)
+runProg:  MEMORY[10] = 0685, opcode = 06, operand = 85, GPREG = 0001 (LOAD)
+runProg:  MEMORY[11] = 0290, opcode = 02, operand = 90, GPREG = 0005 (SUB)
+runProg:  MEMORY[12] = 1206, opcode = 12, operand = 06, GPREG = 0004 (BN)
+runProg:  MEMORY[06] = 0990, opcode = 09, operand = 90, GPREG = 0004 (WRITE)
+[90] -> 1
+runProg:  MEMORY[07] = 0690, opcode = 06, operand = 90, GPREG = 0004 (LOAD)
+runProg:  MEMORY[08] = 0181, opcode = 01, operand = 81, GPREG = 0001 (ADD)
+runProg:  MEMORY[09] = 0790, opcode = 07, operand = 90, GPREG = 0002 (STOR)
+runProg:  MEMORY[10] = 0685, opcode = 06, operand = 85, GPREG = 0002 (LOAD)
+runProg:  MEMORY[11] = 0290, opcode = 02, operand = 90, GPREG = 0005 (SUB)
+runProg:  MEMORY[12] = 1206, opcode = 12, operand = 06, GPREG = 0003 (BN)
+runProg:  MEMORY[06] = 0990, opcode = 09, operand = 90, GPREG = 0003 (WRITE)
+[90] -> 2
+runProg:  MEMORY[07] = 0690, opcode = 06, operand = 90, GPREG = 0003 (LOAD)
+runProg:  MEMORY[08] = 0181, opcode = 01, operand = 81, GPREG = 0002 (ADD)
+runProg:  MEMORY[09] = 0790, opcode = 07, operand = 90, GPREG = 0003 (STOR)
+runProg:  MEMORY[10] = 0685, opcode = 06, operand = 85, GPREG = 0003 (LOAD)
+runProg:  MEMORY[11] = 0290, opcode = 02, operand = 90, GPREG = 0005 (SUB)
+runProg:  MEMORY[12] = 1206, opcode = 12, operand = 06, GPREG = 0002 (BN)
+runProg:  MEMORY[06] = 0990, opcode = 09, operand = 90, GPREG = 0002 (WRITE)
+[90] -> 3
+runProg:  MEMORY[07] = 0690, opcode = 06, operand = 90, GPREG = 0002 (LOAD)
+runProg:  MEMORY[08] = 0181, opcode = 01, operand = 81, GPREG = 0003 (ADD)
+runProg:  MEMORY[09] = 0790, opcode = 07, operand = 90, GPREG = 0004 (STOR)
+runProg:  MEMORY[10] = 0685, opcode = 06, operand = 85, GPREG = 0004 (LOAD)
+runProg:  MEMORY[11] = 0290, opcode = 02, operand = 90, GPREG = 0005 (SUB)
+runProg:  MEMORY[12] = 1206, opcode = 12, operand = 06, GPREG = 0001 (BN)
+runProg:  MEMORY[06] = 0990, opcode = 09, operand = 90, GPREG = 0001 (WRITE)
+[90] -> 4
+runProg:  MEMORY[07] = 0690, opcode = 06, operand = 90, GPREG = 0001 (LOAD)
+runProg:  MEMORY[08] = 0181, opcode = 01, operand = 81, GPREG = 0004 (ADD)
+runProg:  MEMORY[09] = 0790, opcode = 07, operand = 90, GPREG = 0005 (STOR)
+runProg:  MEMORY[10] = 0685, opcode = 06, operand = 85, GPREG = 0005 (LOAD)
+runProg:  MEMORY[11] = 0290, opcode = 02, operand = 90, GPREG = 0005 (SUB)
+runProg:  MEMORY[12] = 1206, opcode = 12, operand = 06, GPREG = 0000 (BN)
+runProg:  MEMORY[13] = 0099, opcode = 00, operand = 99, GPREG = 0000 (HALT)
+28. [usnick@cs lab7-VPC]$ cp jul6b.src /usr/tmp/PF2
+29. [usnick@cs lab7-VPC]$ exit
+
+Script done on Wed 06 Jul 2016 12:25:26 PM CDT
