@@ -1,0 +1,74 @@
+#########################################################################
+# HALT  = 0;  stop program
+# ADD   = 1;  GPREG is updated with itself + MEMORY[arg]
+# SUB   = 2;  GPREG is updated with itself - MEMORY[arg]
+# MLT   = 3;  GPREG is updated with itself * MEMORY[arg]
+# DIV   = 4;  GPREG is updated with itself / MEMORY[arg]
+# ILOAD = 5;  arg to GPREG
+# LOAD  = 6;  MEMORY[arg] to GPREG
+# STOR  = 7;  GPREG to MEMORY[arg]
+# READ  = 8;  keyboard to MEMORY[arg]
+# WRITE = 9;  MEMORY[arg] to screen
+# BR    = 10; unconditional branch to instruction at MEMORY[arg]
+# BZ    = 11; branch if GPREG is zero
+# BN    = 12; branch if GPREG is nonzero
+# DUMP  = 13; dump memory/register contents
+#########################################################################
+
+# var sum = 0;
+# var count = 0;
+# while(read != 0) sum += read, count++
+# write(sum / count
+
+# purpose of program: Allow user to input numbers until the user
+#     enters 0. In which case it will output the average of the 
+#     entered numbers.
+
+# variable map:
+#    80 : user input
+#    90 : sum
+#    91 : count
+#    92 : incrementer
+#    93 : average
+
+# var sum = 0
+ILOAD 0
+STOR 90
+
+# var count = 0
+STOR 91
+
+# var incrementer = 1
+ILOAD 1
+STOR 92
+
+# DOLOOP:
+# if(input != 0) goto WRITEAVG
+READ 80
+LOAD 80
+BZ 15
+
+# Increment input amount by running sum
+ADD 90
+STOR 90
+
+# Increment count(91) by incrementer (92)
+LOAD 91
+ADD 92
+STOR 91
+
+# if ( input == 0) goto DOLOOP;
+LOAD 80
+BN 5
+
+# WRITEAVG:
+# Calculate average 
+LOAD 90
+DIV 91
+
+# Store average to 92
+STOR 93
+
+# Write average
+WRITE 93
+HALT 99
